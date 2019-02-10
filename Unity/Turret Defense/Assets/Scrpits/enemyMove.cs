@@ -19,7 +19,9 @@ public class enemyMove: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(NodePoints.NodePoints[IndexOfNodes].position - transform.position), speed * Time.deltaTime);
         transform.position = Vector3.MoveTowards(transform.position, NodePoints.NodePoints[IndexOfNodes].position, speed * Time.deltaTime);
+        
         if (Vector3.Distance(transform.position, NodePoints.NodePoints[IndexOfNodes].position) < 0.1f)
         {
             if (IndexOfNodes < NodePoints.NodePoints.Length - 1)
