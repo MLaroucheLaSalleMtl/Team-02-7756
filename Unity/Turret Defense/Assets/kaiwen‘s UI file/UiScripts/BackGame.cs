@@ -15,40 +15,25 @@ public class BackGame : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        PausePanel.SetActive(false);
+        PausePanel.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-       // Debug.Log("enter");
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            pausePanel = true;
-            PausePanel.SetActive(true);
+            GamePanelFunction();
         }
-        //GamePanelFunction();
     }
     public void GamePanelFunction()
     {
-        Debug.Log("enter");
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            pausePanel = true;
-            PausePanel.SetActive(true);
-        }
-        else if (pausePanel  && Input.GetButtonDown("Jump"))
-        {
+       
+      
             pausePanel = false;
             PausePanel.SetActive(false);
-
-        }
+        
+  
     }
    
-
-    public void GoBackGame()
-    {
-        pausePanel = false;
-        PausePanel.SetActive(false);
-    }
 }
