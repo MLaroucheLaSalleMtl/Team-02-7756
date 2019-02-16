@@ -5,7 +5,10 @@ using UnityEngine;
 public class BuildTurret : MonoBehaviour
 { 
     public static BuildTurret myInstance;
-    [SerializeField] private GameObject turretToBuild;
+    public GameObject turret_1;
+    public GameObject turret_2;
+    public GameObject turret_3;
+    private GameObject turretToBuild;
 
     void Awake()
     {
@@ -15,6 +18,11 @@ public class BuildTurret : MonoBehaviour
         }
     }
 
+    
+    public void TurretSelection(GameObject turret)
+    {
+        turretToBuild = turret;
+    }
     public GameObject GetTurrettoBuild()
     {
         return turretToBuild;

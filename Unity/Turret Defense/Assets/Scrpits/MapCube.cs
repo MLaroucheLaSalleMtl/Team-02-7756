@@ -20,6 +20,10 @@ public class MapCube : MonoBehaviour
 
     void OnMouseEnter()
     {
+        if (BuildTurret.myInstance.GetTurrettoBuild() == null)
+        {
+            return;
+        }
         r.material.color = pressColor;
     }
 
@@ -30,6 +34,10 @@ public class MapCube : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (BuildTurret.myInstance.GetTurrettoBuild() == null)
+        {
+            return;
+        }
         if(turret != null)
         {
             Debug.Log("Can't Build");
