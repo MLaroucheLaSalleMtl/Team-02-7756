@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41c4b53c27d713e4096eabdcfac4f0b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretToBuild: {fileID: 323538535660755443, guid: 1213acc2465015c4791c6ce8905ba652,
+  turretToBuild: {fileID: 764366769297914909, guid: 23fe61082b705404ca089609f6ea795c,
     type: 3}
 --- !u!1 &33447530
 GameObject:
@@ -4162,6 +4162,7 @@ GameObject:
   - component: {fileID: 1667797036}
   - component: {fileID: 1667797035}
   - component: {fileID: 1667797034}
+  - component: {fileID: 1667797037}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4199,11 +4200,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.03
   far clip plane: 1000
-  field of view: 60
+  field of view: 81
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 27.04
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4226,13 +4227,25 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667797033}
-  m_LocalRotation: {x: 0.32463408, y: 0.6284601, z: -0.32502633, w: 0.627701}
-  m_LocalPosition: {x: -9, y: 19.8, z: 15.2}
+  m_LocalRotation: {x: 0.5591929, y: 0, z: 0, w: 0.8290376}
+  m_LocalPosition: {x: 11.6, y: 27.3, z: 5.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 68, y: 0, z: 0}
+--- !u!114 &1667797037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667797033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61483a4acd85c4d419da9c77f4eeac66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1672164542 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 134346135166218463, guid: d00080d9bf35d1f4a961d6ff4bdf1468,
