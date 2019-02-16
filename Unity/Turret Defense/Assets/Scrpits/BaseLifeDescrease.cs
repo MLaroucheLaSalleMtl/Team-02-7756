@@ -4,13 +4,12 @@ using UnityEngine;
 
   public class BaseLifeDescrease : MonoBehaviour
   {
-    [SerializeField]
-    private float BaseLife = 10f;
+    public float baseLife = 10f;
     public bool lostLiffe;
 
-    void lostLife()
+    public void LostLife()
     {
-        BaseLife--;
+         baseLife--;
     }
 
     void OnTriggerEnter(Collider col)
@@ -19,7 +18,7 @@ using UnityEngine;
         {
             Debug.Log("lost life baby");
             lostLiffe = true;
-            lostLife();
+            LostLife();
         }
 
     }

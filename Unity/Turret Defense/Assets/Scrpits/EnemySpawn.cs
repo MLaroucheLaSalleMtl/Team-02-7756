@@ -10,7 +10,8 @@ public class EnemySpawn : MonoBehaviour
     private float spawningTime = 4f;
     private float spwanCountdown = 2f;
     private int waveNumber = 0;
-    
+
+ 
     // Start is called before the first frame update
 
         IEnumerator WaveSpawner()
@@ -27,6 +28,7 @@ public class EnemySpawn : MonoBehaviour
     {
         Transform enemy = enemies[Random.Range(0, enemies.Length)];
         Instantiate(enemy.gameObject,SpawnPos.position,SpawnPos.rotation);
+      
     }
     void Start()
     {
