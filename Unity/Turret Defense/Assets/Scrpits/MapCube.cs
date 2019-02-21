@@ -8,14 +8,14 @@ public class MapCube : MonoBehaviour
     private Renderer r;
     private Color originalColor;
     private GameObject turret;
-    private Vector3 positionOffset_CannonTower;
+    private Vector3 posOffset_CannonTower;
 
     // Start is called before the first frame update
     void Start()
     {
         r = GetComponent<Renderer>();
         originalColor = r.material.color;
-        positionOffset_CannonTower = new Vector3(0.2f, 0.91f, 0.3f);
+        posOffset_CannonTower = new Vector3(0.94f, 3.5f, 2f);
     }
 
     void OnMouseEnter()
@@ -45,7 +45,7 @@ public class MapCube : MonoBehaviour
         }
 
         GameObject turretToBuild = BuildTurret.myInstance.GetTurrettoBuild();
-        turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset_CannonTower, transform.rotation);
+        turret = (GameObject)Instantiate(turretToBuild, transform.position + posOffset_CannonTower, transform.rotation);
     }
     // Update is called once per frame
     void Update()
