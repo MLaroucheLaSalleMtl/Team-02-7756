@@ -22,6 +22,7 @@ public class BuildTurret : MonoBehaviour
     public void TurretSelection(GameObject turret)
     {
         turretToBuild = turret;
+        Debug.Log(turret.name);
     }
     public GameObject GetTurrettoBuild()
     {

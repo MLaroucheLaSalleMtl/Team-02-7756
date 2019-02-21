@@ -16,7 +16,6 @@ public class WeaponSelection : MonoBehaviour
     public void BuyTurret_1()
     {
         buildTurretRef.TurretSelection(buildTurretRef.turret_1);
-       
     }
     public void BuyTurret_2()
     {

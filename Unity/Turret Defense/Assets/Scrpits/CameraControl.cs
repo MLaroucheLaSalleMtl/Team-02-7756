@@ -29,8 +29,23 @@ public class CameraControl : MonoBehaviour
             transform.Translate(Vector3.left * Time.deltaTime * 10f);
         }
 
-        Mathf.Clamp(transform.position.y, 10f, 80f);
-        Mathf.Clamp(transform.position.x, 10f,80f);
+        Vector3 v3 = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        v3.z = Mathf.Clamp(transform.position.z, -127f, -100f);
+        v3.x = Mathf.Clamp(transform.position.x, 10f,80f);
+        transform.position = v3;
+
         
+     
+        Camera.main.fieldOfView -= Input.GetAxis("Mouse ScrollWheel")* 10f;
+
+        if(Camera.main.fieldOfView < 10f)
+        {
+            Camera.main.fieldOfView = 10f;
+        }
+        else if(Camera.main.fieldOfView > 50f)
+        {
+            Camera.main.fieldOfView = 50f;
+        }
+
     }
 }
