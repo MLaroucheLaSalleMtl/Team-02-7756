@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 323538535660755443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 8284096210229464654}
   - {fileID: 6179471826724117040}
@@ -119,6 +119,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6179471826724117040}
     m_Modifications:
+    - target: {fileID: 100000, guid: c234c7644ae012848a8e577557114e04, type: 3}
+      propertyPath: m_Name
+      value: SM_missile_top
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c234c7644ae012848a8e577557114e04, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.023347765
@@ -175,10 +179,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 6.5
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: c234c7644ae012848a8e577557114e04, type: 3}
-      propertyPath: m_Name
-      value: SM_missile_top
-      objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: c234c7644ae012848a8e577557114e04, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -198,6 +198,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5414654604941498722}
     m_Modifications:
+    - target: {fileID: 100000, guid: 9ce1ad18a73abf04fba11a28752097e7, type: 3}
+      propertyPath: m_Name
+      value: SM_missile_down
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9ce1ad18a73abf04fba11a28752097e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.47374853
@@ -253,10 +257,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 9ce1ad18a73abf04fba11a28752097e7, type: 3}
       propertyPath: m_LocalScale.z
       value: 6.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9ce1ad18a73abf04fba11a28752097e7, type: 3}
-      propertyPath: m_Name
-      value: SM_missile_down
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9ce1ad18a73abf04fba11a28752097e7, type: 3}
       propertyPath: m_Materials.Array.data[0]
