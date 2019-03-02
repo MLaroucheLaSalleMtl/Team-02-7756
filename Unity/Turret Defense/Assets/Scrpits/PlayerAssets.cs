@@ -12,10 +12,11 @@ public class PlayerAssets: MonoBehaviour
     [SerializeField] private Button button2;
     [SerializeField] private Button button3;
 
+    [SerializeField] private GameObject GameOverMenu;
 
     private BaseLifeDescrease baseLifeDecreaseRef;
     private WeaponSelection weaponSelectionRef;
-    
+   
     public int starterMoney = 600;
     public int moneyLeft = 0;
 
@@ -48,6 +49,12 @@ public class PlayerAssets: MonoBehaviour
 
         lifeText.text = "Lifes: " + baseLifeDecreaseRef.baseLife.ToString();
         moneyText.text ="$: " + moneyLeft.ToString();
+
+        if (baseLifeDecreaseRef.baseLife <= 0)
+        {
+            GameOverMenu.SetActive(true);
+            
+        }
         
     }
 
