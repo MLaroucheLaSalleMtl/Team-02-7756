@@ -6,25 +6,34 @@ public class WeaponSelection : MonoBehaviour
 {
 
     BuildTurret buildTurretRef;
-    // Start is called before the first frame update
+    PlayerAssets playerAssetsRef;
+    int turretPrice_1 = 50;
+    int turretPrice_2 = 200;
+    int turretPrice_3 = 100;
+
     void Start()
     {
         buildTurretRef = BuildTurret.myInstance;
+        playerAssetsRef = FindObjectOfType<PlayerAssets>();
+        
     }
+  
 
-    // Update is called once per frame
     public void BuyTurret_1()
     {
         buildTurretRef.TurretSelection(buildTurretRef.turret_1);
+        playerAssetsRef.moneyLeft -= turretPrice_1;
     }
     public void BuyTurret_2()
     {
         buildTurretRef.TurretSelection(buildTurretRef.turret_2);
-
+        playerAssetsRef.moneyLeft -= turretPrice_2;
     }
+
     public void BuyTurret_3()
     {
         buildTurretRef.TurretSelection(buildTurretRef.turret_3);
-
+        playerAssetsRef.moneyLeft -= turretPrice_3;
     }
+
 }

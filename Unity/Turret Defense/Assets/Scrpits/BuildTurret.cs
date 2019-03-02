@@ -8,8 +8,9 @@ public class BuildTurret : MonoBehaviour
     public GameObject turret_1;
     public GameObject turret_2;
     public GameObject turret_3;
-    private GameObject turretToBuild;
+    public GameObject turretToBuild;
 
+    
     void Awake()
     {
         if (myInstance ==null)
@@ -22,13 +23,18 @@ public class BuildTurret : MonoBehaviour
     public void TurretSelection(GameObject turret)
     {
         turretToBuild = turret;
-        Debug.Log(turret.name);
+        
     }
     public GameObject GetTurrettoBuild()
     {
         return turretToBuild;
-
     }
+
+    public void SetTurretToBuildToBeEmpty()
+    {
+        turretToBuild = null;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
