@@ -11,27 +11,27 @@ public class CameraControl : MonoBehaviour
     void Update()
     {
 
-        if (Input.mousePosition.y >= Screen.height - 5f)
+        if (Input.mousePosition.y >= Screen.height - 20f)
         {
             transform.Translate(Vector3.forward * Time.deltaTime * 10f, Space.World);
         }
     
-        if(Input.mousePosition.y <= 5f)
+        if(Input.mousePosition.y <= 20f)
         {
             transform.Translate(Vector3.back * Time.deltaTime * 10f,Space.World);
         }
-        if(Input.mousePosition.x >= Screen.width - 5f)
+        if(Input.mousePosition.x >= Screen.width - 20f)
         {
             transform.Translate(Vector3.right * Time.deltaTime * 10f);
         }
-        if (Input.mousePosition.x <= 5f)
+        if (Input.mousePosition.x <= 20f)
         {
             transform.Translate(Vector3.left * Time.deltaTime * 10f);
         }
 
         Vector3 v3 = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         v3.z = Mathf.Clamp(transform.position.z, -127f, -100f);
-        v3.x = Mathf.Clamp(transform.position.x, 10f,80f);
+        v3.x = Mathf.Clamp(transform.position.x, 30f,60f);
         transform.position = v3;
 
         

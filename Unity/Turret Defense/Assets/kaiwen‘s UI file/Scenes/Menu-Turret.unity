@@ -729,6 +729,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: BtnLoadScene
       objectReference: {fileID: 0}
+    - target: {fileID: 497413279324630195, guid: cc42186d28143d4439983c593de677e0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Loading
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc42186d28143d4439983c593de677e0, type: 3}
 --- !u!1 &1971069988 stripped
@@ -925,18 +930,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7071403113207017564, guid: 941cdd60d4c20524abf255c2c937cc02,
-        type: 3}
-      propertyPath: audioM
-      value: 
-      objectReference: {fileID: 24100000, guid: 731348799128a6541bfc18342c462565,
-        type: 2}
-    - target: {fileID: 7071666031449805620, guid: 941cdd60d4c20524abf255c2c937cc02,
-        type: 3}
-      propertyPath: audioM
-      value: 
-      objectReference: {fileID: 24100000, guid: 731348799128a6541bfc18342c462565,
-        type: 2}
     - target: {fileID: 7074446987676498618, guid: 941cdd60d4c20524abf255c2c937cc02,
         type: 3}
       propertyPath: m_Sprite
@@ -978,6 +971,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PanelToggle
       objectReference: {fileID: 0}
+    - target: {fileID: 7071403113207017564, guid: 941cdd60d4c20524abf255c2c937cc02,
+        type: 3}
+      propertyPath: audioM
+      value: 
+      objectReference: {fileID: 24100000, guid: 731348799128a6541bfc18342c462565,
+        type: 2}
+    - target: {fileID: 7071666031449805620, guid: 941cdd60d4c20524abf255c2c937cc02,
+        type: 3}
+      propertyPath: audioM
+      value: 
+      objectReference: {fileID: 24100000, guid: 731348799128a6541bfc18342c462565,
+        type: 2}
     - target: {fileID: 1803021663, guid: 941cdd60d4c20524abf255c2c937cc02, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1181,7 +1186,7 @@ PrefabInstance:
     - target: {fileID: 3412017157338967053, guid: c0c9897f18d27c1498249e6f59bb213c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Loading-kaiwen
+      value: Loading
       objectReference: {fileID: 0}
     - target: {fileID: 3412017157338967053, guid: c0c9897f18d27c1498249e6f59bb213c,
         type: 3}
