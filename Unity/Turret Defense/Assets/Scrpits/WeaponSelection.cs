@@ -15,7 +15,6 @@ public class WeaponSelection : MonoBehaviour
     {
         buildTurretRef = BuildTurret.myInstance;
         playerAssetsRef = FindObjectOfType<PlayerAssets>();
-        
     }
   
 
