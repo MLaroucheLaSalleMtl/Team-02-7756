@@ -7,11 +7,16 @@ public class BulletBehaviour : MonoBehaviour
     [SerializeField] private GameObject ExplosionEffect;
     private Transform target;
     [SerializeField] private float bulletSpeed = 5f;
+    [SerializeField] private float BulletDamage = 20f;
+    //public GameObject enemy;
 
     private void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Enemy")
         {
+            
+            EnemyStats Myenemy = target.GetComponent<EnemyStats>();
+            Myenemy.TakingDamage(BulletDamage);
             GameObject cloneEffect = (GameObject)Instantiate(ExplosionEffect,target.transform.position,target.transform.rotation);
             Instantiate(cloneEffect);
             Destroy(cloneEffect, 2f);
@@ -26,14 +31,15 @@ public class BulletBehaviour : MonoBehaviour
     void Hit()
     {
         Debug.Log("Hit!");
-        Destroy(gameObject);
-        Destroy(target.gameObject);
+        //Destroy(gameObject);
+        //Destroy(target.gameObject);
     }
 
 
     void Update()
     {
-
+        
+       
         if(target == null)
         {
             Destroy(gameObject);
