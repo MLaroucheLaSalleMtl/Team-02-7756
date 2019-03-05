@@ -5,10 +5,13 @@ using UnityEngine.UI;
 
 public class EnemyStats : MonoBehaviour
 {
-    private int countDownEnemy;
+   
    [SerializeField]  public float MaxHealth = 100f;
    [SerializeField] public float Currenthealth;
     public Image EnemyHpBar;
+
+   
+  
 
     public void TakingDamage(float damage)
     {
@@ -18,7 +21,7 @@ public class EnemyStats : MonoBehaviour
         if (Currenthealth <= 0)
         {
             Destroy(gameObject);
-           
+            EnemySpawn.enemyLeft--;
          
         }
     }
@@ -27,13 +30,14 @@ public class EnemyStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       
         Currenthealth = MaxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
+       
         //countDownEnemy = EnemySpawn.enemyLeft;
     }
 }

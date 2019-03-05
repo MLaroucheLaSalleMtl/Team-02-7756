@@ -17,9 +17,9 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] private int CountEnemy;
     [SerializeField] private int CurrentEnemy;
     public GameObject GameOverPanel;
-    [SerializeField] private Text UIenemyLeft;
+    [SerializeField]public Text UIenemyLeft;
     private int MaxEnemyLv1 = 10;
-    public int enemyLeft;
+    public static int enemyLeft;
  
     
 
@@ -63,9 +63,9 @@ public class EnemySpawn : MonoBehaviour
     void Start()
     {
         enemyLeft = MaxEnemyLv1;
-        Transform enemy = enemies[Random.Range(0, enemies.Length)];
-        Instantiate(enemy.gameObject, SpawnPos.position, SpawnPos.rotation);
-       // Currenthealth = starthealth;
+        //Transform enemy = enemies[Random.Range(0, enemies.Length)];
+        //Instantiate(enemy.gameObject, SpawnPos.position, SpawnPos.rotation);
+      
     }
 
     // Update is called once per frame
