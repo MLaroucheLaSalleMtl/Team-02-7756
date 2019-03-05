@@ -18,7 +18,7 @@ public class MapCube : MonoBehaviour
     {
         r = GetComponent<Renderer>();
         originalColor = r.material.color;
-        posOffset_CannonTower = new Vector3(0.94f, 3.5f, 2f);
+       
 
         playerAssetsRef = FindObjectOfType<PlayerAssets>();
     }
@@ -56,7 +56,7 @@ public class MapCube : MonoBehaviour
         }
 
         GameObject turretToBuild = BuildTurret.myInstance.GetTurrettoBuild();
-        turret = (GameObject)Instantiate(turretToBuild, transform.position + posOffset_CannonTower, transform.rotation);
+        turret = (GameObject)Instantiate(turretToBuild, transform.position, transform.rotation);
 
         BuildTurret.myInstance.SetTurretToBuildToBeEmpty();
         

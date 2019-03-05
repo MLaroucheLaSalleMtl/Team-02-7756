@@ -82,7 +82,7 @@ public class MissileTurretBehaviour : MonoBehaviour
         Vector3 targetRotation =
         Quaternion.Lerp(turretHead.rotation, Quaternion.LookRotation(targetDir), Time.deltaTime * 5f).eulerAngles;
         turretHead.rotation = Quaternion.Euler(0f, targetRotation.y, 0f);
-
+       
         if (fireCountDown <= 0f)
         {
             Shoot();

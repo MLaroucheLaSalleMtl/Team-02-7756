@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  turretHead: {fileID: 764366769796338779}
+  turretHead: {fileID: 764366767995682536}
   bulletDemo: {fileID: 1273679559769204, guid: ff96c31f3b7e9e3418c7de97600b9219, type: 3}
   Muzz_Cannon: {fileID: 100006, guid: b0a227fc2e558f241b1c747820ccc361, type: 3}
   firePoint: {fileID: 6892238570604504943}
@@ -183,14 +183,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764366769796338776}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.18875273, z: 0, w: 0.9820246}
   m_LocalPosition: {x: 0.041, y: 0.27, z: 0.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6892238570604504943}
   m_Father: {fileID: 764366767995682536}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -21.76, z: 0}
 --- !u!33 &764366769796338725
 MeshFilter:
   m_ObjectHideFlags: 0
