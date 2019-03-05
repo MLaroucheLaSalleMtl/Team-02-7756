@@ -30,8 +30,8 @@ public class CameraControl : MonoBehaviour
         }
 
         Vector3 v3 = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        v3.z = Mathf.Clamp(transform.position.z, -127f, -100f);
-        v3.x = Mathf.Clamp(transform.position.x, 30f,60f);
+        v3.z = Mathf.Clamp(transform.position.z, -90f,  90f);
+        v3.x = Mathf.Clamp(transform.position.x, -30f,90f);
         transform.position = v3;
 
         
