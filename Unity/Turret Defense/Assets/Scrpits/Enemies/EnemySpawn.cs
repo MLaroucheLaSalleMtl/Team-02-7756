@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class EnemySpawn : MonoBehaviour
 {
@@ -16,11 +17,12 @@ public class EnemySpawn : MonoBehaviour
     private int waveNumber = 0;
     [SerializeField] private int CountEnemy;
     [SerializeField] private int CurrentEnemy;
-    public GameObject GameOverPanel;
+    public GameObject WinPanel;
     [SerializeField]public Text UIenemyLeft;
-    private int MaxEnemyLv1 = 10;
+    private int MaxEnemyLv1 = 15;
     public static int enemyLeft;
- 
+    public bool Win = false;
+    
     
 
     // Start is called before the first frame update
@@ -62,10 +64,11 @@ public class EnemySpawn : MonoBehaviour
     }
     void Start()
     {
+        
         enemyLeft = MaxEnemyLv1;
         //Transform enemy = enemies[Random.Range(0, enemies.Length)];
         //Instantiate(enemy.gameObject, SpawnPos.position, SpawnPos.rotation);
-      
+        Win = false;
     }
 
     // Update is called once per frame
@@ -82,9 +85,16 @@ public class EnemySpawn : MonoBehaviour
         }
         spwanCountdown -= Time.deltaTime;
 
-        if (CountEnemy==MaxEnemyLv1&&CurrentEnemy==0)
+        if (CountEnemy==MaxEnemyLv1&&CurrentEnemy==0&&Win == false)
         {
-            GameOverPanel.SetActive(true);
+            Win = true;
+            WinPanel.SetActive(true);
+            Time.timeScale = 0f;
+            if (Win)
+            {
+                //Plays win music   
+                FindObjectOfType<AudioManager>().Play("WinMusic");
+            }
         }
         //tianfang march 2nd
         //    healthbar.transform.position = Camera.main.WorldToScreenPoint(Vector3.up * 1) + transform.position;

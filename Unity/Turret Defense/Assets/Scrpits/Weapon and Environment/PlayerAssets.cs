@@ -13,6 +13,7 @@ public class PlayerAssets: MonoBehaviour
     [SerializeField] private Button button3;
 
     [SerializeField] private GameObject GameOverMenu;
+    [SerializeField] private bool isGameOver = false;
 
     private BaseLifeDescrease baseLifeDecreaseRef;
     private WeaponSelection weaponSelectionRef;
@@ -50,10 +51,15 @@ public class PlayerAssets: MonoBehaviour
         lifeText.text = "Lifes: " + baseLifeDecreaseRef.baseLife.ToString();
         moneyText.text ="$: " + moneyLeft.ToString();
 
-        if (baseLifeDecreaseRef.baseLife <= 0)
+        if (baseLifeDecreaseRef.baseLife <= 0&& !isGameOver )
         {
+            isGameOver = true;
             GameOverMenu.SetActive(true);
-            
+            Time.timeScale = 0f;
+            if (isGameOver && GameOverMenu)
+            {
+                FindObjectOfType<AudioManager>().Play("LoseMusic");
+            }
         }
         
     }

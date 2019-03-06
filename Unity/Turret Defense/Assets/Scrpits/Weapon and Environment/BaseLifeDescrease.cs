@@ -7,6 +7,8 @@ using UnityEngine;
     public float baseLife = 10f;
     public bool lostLiffe;
 
+
+
     public void LostLife()
     {
          baseLife--;
