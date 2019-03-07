@@ -20,6 +20,7 @@ public class BulletBehaviour : MonoBehaviour
             GameObject cloneEffect = (GameObject)Instantiate(ExplosionEffect,target.transform.position,target.transform.rotation);
             Instantiate(cloneEffect);
             Destroy(cloneEffect, 2f);
+            Destroy(gameObject);
         }
     }
 

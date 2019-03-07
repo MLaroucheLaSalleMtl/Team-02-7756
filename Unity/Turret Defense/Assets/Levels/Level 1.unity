@@ -1252,7 +1252,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1140348042
 GameObject:
@@ -2303,75 +2303,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 6084694284716085777}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &740161868489579190
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 323538535660755443, guid: 1213acc2465015c4791c6ce8905ba652,
-        type: 3}
-      propertyPath: m_Name
-      value: MissileTower
-      objectReference: {fileID: 0}
-    - target: {fileID: 5414654604941498722, guid: 1213acc2465015c4791c6ce8905ba652,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5414654604941498722, guid: 1213acc2465015c4791c6ce8905ba652,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 5414654604941498722, guid: 1213acc2465015c4791c6ce8905ba652,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5414654604941498722, guid: 1213acc2465015c4791c6ce8905ba652,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5414654604941498722, guid: 1213acc2465015c4791c6ce8905ba652,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5414654604941498722, guid: 1213acc2465015c4791c6ce8905ba652,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5414654604941498722, guid: 1213acc2465015c4791c6ce8905ba652,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5414654604941498722, guid: 1213acc2465015c4791c6ce8905ba652,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 5414654604941498722, guid: 1213acc2465015c4791c6ce8905ba652,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5414654604941498722, guid: 1213acc2465015c4791c6ce8905ba652,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5414654604941498722, guid: 1213acc2465015c4791c6ce8905ba652,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1213acc2465015c4791c6ce8905ba652, type: 3}
 --- !u!1001 &3204007230648023487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2384,6 +2315,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 3204007231299911995, guid: 3bd118dd73f43ca45a75251f3a3ff311,
+        type: 3}
+      propertyPath: PauseMenuUI
+      value: 
+      objectReference: {fileID: 665024504}
+    - target: {fileID: 3204007231299911995, guid: 3bd118dd73f43ca45a75251f3a3ff311,
+        type: 3}
+      propertyPath: PausePanel
+      value: 
+      objectReference: {fileID: 665024504}
+    - target: {fileID: 3204007231299911993, guid: 3bd118dd73f43ca45a75251f3a3ff311,
+        type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 1667797038}
     - target: {fileID: 3204007231299911996, guid: 3bd118dd73f43ca45a75251f3a3ff311,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2439,21 +2385,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3204007231299911995, guid: 3bd118dd73f43ca45a75251f3a3ff311,
-        type: 3}
-      propertyPath: PauseMenuUI
-      value: 
-      objectReference: {fileID: 665024504}
-    - target: {fileID: 3204007231299911995, guid: 3bd118dd73f43ca45a75251f3a3ff311,
-        type: 3}
-      propertyPath: PausePanel
-      value: 
-      objectReference: {fileID: 665024504}
-    - target: {fileID: 3204007231299911993, guid: 3bd118dd73f43ca45a75251f3a3ff311,
-        type: 3}
-      propertyPath: source
-      value: 
-      objectReference: {fileID: 1667797038}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bd118dd73f43ca45a75251f3a3ff311, type: 3}
 --- !u!1001 &6084694284716085777
@@ -2468,6 +2399,39 @@ PrefabInstance:
       propertyPath: m_Name
       value: PanelsCombinationOfLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 6084694283748722853, guid: 6f250deb4e8efec438da6c09cd7085f7,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 997a43b767814dd0a7642ec9b78cba41,
+        type: 3}
+    - target: {fileID: 6084694284301637687, guid: 6f250deb4e8efec438da6c09cd7085f7,
+        type: 3}
+      propertyPath: m_Text
+      value: '$: 300'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144136879735582732, guid: 6f250deb4e8efec438da6c09cd7085f7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084694284721931291, guid: 6f250deb4e8efec438da6c09cd7085f7,
+        type: 3}
+      propertyPath: m_Text
+      value: $ 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084694284721931291, guid: 6f250deb4e8efec438da6c09cd7085f7,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 997a43b767814dd0a7642ec9b78cba41,
+        type: 3}
+    - target: {fileID: 6084694284278594158, guid: 6f250deb4e8efec438da6c09cd7085f7,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 997a43b767814dd0a7642ec9b78cba41,
+        type: 3}
     - target: {fileID: 495052770346403551, guid: 6f250deb4e8efec438da6c09cd7085f7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2648,21 +2612,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4144136879735582732, guid: 6f250deb4e8efec438da6c09cd7085f7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4144136880015811006, guid: 6f250deb4e8efec438da6c09cd7085f7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 669317253}
-    - target: {fileID: 6084694284301637687, guid: 6f250deb4e8efec438da6c09cd7085f7,
-        type: 3}
-      propertyPath: m_Text
-      value: '$: 300'
-      objectReference: {fileID: 0}
     - target: {fileID: 6084694285386136900, guid: 6f250deb4e8efec438da6c09cd7085f7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2698,29 +2652,6 @@ PrefabInstance:
       propertyPath: turretPrice.Array.data[0]
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 6084694283748722853, guid: 6f250deb4e8efec438da6c09cd7085f7,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 997a43b767814dd0a7642ec9b78cba41,
-        type: 3}
-    - target: {fileID: 6084694284278594158, guid: 6f250deb4e8efec438da6c09cd7085f7,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 997a43b767814dd0a7642ec9b78cba41,
-        type: 3}
-    - target: {fileID: 6084694284721931291, guid: 6f250deb4e8efec438da6c09cd7085f7,
-        type: 3}
-      propertyPath: m_Text
-      value: $ 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6084694284721931291, guid: 6f250deb4e8efec438da6c09cd7085f7,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 997a43b767814dd0a7642ec9b78cba41,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f250deb4e8efec438da6c09cd7085f7, type: 3}
 --- !u!1001 &7592820206628390482

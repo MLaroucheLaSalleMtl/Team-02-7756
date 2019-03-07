@@ -20,7 +20,7 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] private int CurrentEnemy;
     public GameObject WinPanel;
     [SerializeField] public Text UIenemyLeft;
-    private int MaxEnemyLv1 = 20;
+    private int MaxEnemyLv1 = 30;
     public static int enemyLeft;
     public bool Win = false;
 
