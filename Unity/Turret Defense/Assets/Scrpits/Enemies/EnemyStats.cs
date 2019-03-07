@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class EnemyStats : MonoBehaviour
 {
    
-   [SerializeField]  public float MaxHealth = 100f;
-   [SerializeField] public float Currenthealth;
+    [SerializeField]  public float MaxHealth = 100f;
+    [SerializeField] public float Currenthealth;
     public Image EnemyHpBar;
-
+    public PlayerAssets code;
+    private int reward = 10;
+    
    
   
 
@@ -22,15 +24,19 @@ public class EnemyStats : MonoBehaviour
         {
             Destroy(gameObject);
             EnemySpawn.enemyLeft--;
-         
+            
         }
     }
 
-    
+    public void OnDestroy()
+    {
+        code.moneyLeft += reward;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-       
+        code = FindObjectOfType<PlayerAssets>();
         Currenthealth = MaxHealth;
     }
 

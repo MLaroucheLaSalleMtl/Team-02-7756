@@ -18,8 +18,12 @@ public class PlayerAssets: MonoBehaviour
     private BaseLifeDescrease baseLifeDecreaseRef;
     private WeaponSelection weaponSelectionRef;
    
-    public int starterMoney = 600;
+    public int starterMoney = 500;
     public int moneyLeft = 0;
+    
+   
+
+    
 
     
     void Start()
@@ -47,9 +51,10 @@ public class PlayerAssets: MonoBehaviour
             button2.interactable = false;
             button3.interactable = false;
         }
-
+        
         lifeText.text = "Lifes: " + baseLifeDecreaseRef.baseLife.ToString();
-        moneyText.text ="$: " + moneyLeft.ToString();
+        moneyText.text = "$: " + moneyLeft.ToString();
+
 
         if (baseLifeDecreaseRef.baseLife <= 0&& !isGameOver )
         {
@@ -64,5 +69,6 @@ public class PlayerAssets: MonoBehaviour
         
     }
 
+    
     
 }

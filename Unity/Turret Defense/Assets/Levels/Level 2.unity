@@ -994,6 +994,11 @@ PrefabInstance:
       propertyPath: PauseMenuUI
       value: 
       objectReference: {fileID: 1211519342}
+    - target: {fileID: 3204007231299911995, guid: 3bd118dd73f43ca45a75251f3a3ff311,
+        type: 3}
+      propertyPath: PausePanel
+      value: 
+      objectReference: {fileID: 1211519342}
     - target: {fileID: 3204007231299911993, guid: 3bd118dd73f43ca45a75251f3a3ff311,
         type: 3}
       propertyPath: source

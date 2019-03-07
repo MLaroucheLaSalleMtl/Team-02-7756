@@ -22,12 +22,12 @@ public class EnemySpawn : MonoBehaviour
     private int MaxEnemyLv1 = 15;
     public static int enemyLeft;
     public bool Win = false;
-    
+
     
 
     // Start is called before the first frame update
 
-        IEnumerator WaveSpawner()
+    IEnumerator WaveSpawner()
     {
         for(int i = 0; i < waveNumber; i++)
         {
@@ -85,15 +85,18 @@ public class EnemySpawn : MonoBehaviour
         }
         spwanCountdown -= Time.deltaTime;
 
-        if (CountEnemy==MaxEnemyLv1&&CurrentEnemy==0&&Win == false)
+        if (CountEnemy == MaxEnemyLv1 && CurrentEnemy == 0 && Win == false)
         {
             Win = true;
-            WinPanel.SetActive(true);
-            Time.timeScale = 0f;
+            
             if (Win)
             {
+                WinPanel.SetActive(true);
+                Time.timeScale = 0f;
+                
                 //Plays win music   
                 FindObjectOfType<AudioManager>().Play("WinMusic");
+
             }
         }
         //tianfang march 2nd
