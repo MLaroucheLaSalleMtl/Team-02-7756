@@ -35,8 +35,8 @@ public class PlayerAssets: MonoBehaviour
         moneyLeft = starterMoney;
         
 
-        lifeText.text = "Lifes: " + baseLifeDecreaseRef.baseLife.ToString();
-        moneyText.text = "$: " + moneyLeft.ToString();
+        //lifeText.text = "Lifes: " + baseLifeDecreaseRef.baseLife.ToString();
+        //moneyText.text = "$: " + moneyLeft.ToString();
     }
 
    
@@ -71,9 +71,9 @@ public class PlayerAssets: MonoBehaviour
         {
             moneyLeft = 0;
         }
-            
-        
-        
+
+
+
         lifeText.text = "Lifes: " + baseLifeDecreaseRef.baseLife.ToString();
         moneyText.text = "$: " + moneyLeft.ToString();
 

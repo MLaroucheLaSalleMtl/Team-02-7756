@@ -10,7 +10,7 @@ public class EnemyStats : MonoBehaviour
     [SerializeField] public float Currenthealth;
     public Image EnemyHpBar;
     public PlayerAssets code;
-    private int reward = 10;
+    private int reward = 40;
     
    
   

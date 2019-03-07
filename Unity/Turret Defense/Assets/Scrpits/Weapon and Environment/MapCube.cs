@@ -49,7 +49,7 @@ public class MapCube : MonoBehaviour
             Debug.Log("Can't Build");
             return; 
         }
-        if(playerAssetsRef.moneyLeft < 50)
+        if(playerAssetsRef.moneyLeft < 0)
         {
             Debug.Log("No more build");
             return;
