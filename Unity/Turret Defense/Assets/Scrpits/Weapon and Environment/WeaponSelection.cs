@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponSelection : MonoBehaviour
 {
 
     BuildTurret buildTurretRef;
     PlayerAssets playerAssetsRef;
-    int turretPrice_1 = 50;
+    int turretPrice_1 = 100;
     int turretPrice_2 = 200;
     int turretPrice_3 = 100;
 
@@ -15,9 +16,11 @@ public class WeaponSelection : MonoBehaviour
     {
         buildTurretRef = BuildTurret.myInstance;
         playerAssetsRef = FindObjectOfType<PlayerAssets>();
+
+        
         
     }
-  
+   
 
     public void BuyTurret_1()
     {

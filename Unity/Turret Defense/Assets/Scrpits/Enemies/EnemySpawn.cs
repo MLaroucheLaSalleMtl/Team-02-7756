@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawn : MonoBehaviour
 {
@@ -18,11 +19,14 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] private int CountEnemy;
     [SerializeField] private int CurrentEnemy;
     public GameObject WinPanel;
-    [SerializeField]public Text UIenemyLeft;
-    private int MaxEnemyLv1 = 15;
+    [SerializeField] public Text UIenemyLeft;
+    private int MaxEnemyLv1 = 91;
     public static int enemyLeft;
     public bool Win = false;
 
+    public ButtonBlocker index;
+    int sceneIndex;
+    
     
 
     // Start is called before the first frame update
@@ -69,6 +73,9 @@ public class EnemySpawn : MonoBehaviour
         //Transform enemy = enemies[Random.Range(0, enemies.Length)];
         //Instantiate(enemy.gameObject, SpawnPos.position, SpawnPos.rotation);
         Win = false;
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
+       
+        
     }
 
     // Update is called once per frame
@@ -93,9 +100,13 @@ public class EnemySpawn : MonoBehaviour
             {
                 WinPanel.SetActive(true);
                 Time.timeScale = 0f;
-                
+                //For level block and open design
+              
+                PlayerPrefs.SetInt("levelReached", 2);
+               
                 //Plays win music   
                 FindObjectOfType<AudioManager>().Play("WinMusic");
+
 
             }
         }

@@ -15,10 +15,12 @@ public class PlayerAssets: MonoBehaviour
     [SerializeField] private GameObject GameOverMenu;
     [SerializeField] private bool isGameOver = false;
 
+    private BuildTurret buildTurretRref;
+
     private BaseLifeDescrease baseLifeDecreaseRef;
     private WeaponSelection weaponSelectionRef;
    
-    public int starterMoney = 500;
+    public int starterMoney = 300;
     public int moneyLeft = 0;
     
    
@@ -40,17 +42,37 @@ public class PlayerAssets: MonoBehaviour
    
     void Update()
     {
-        
-        
+
+
 
         //Disable the weapon butttons when moneyleft hits 0
-        if (moneyLeft <= 0)
+
+        button1.interactable = (moneyLeft < 100) ? false : true;
+        button3.interactable = (moneyLeft < 100) ? false : true;
+        button2.interactable = (moneyLeft < 200) ? false : true;
+        
+
+        //if (moneyLeft < 100)
+        //{
+        //    button1.interactable = false;
+        //    button3.interactable = false;
+        //}
+        //else
+        //{
+        //    button1.interactable = true;
+        //    button3.interactable = true;
+        //}
+            
+        //if (moneyLeft < 200)
+        //{
+        //    button2.interactable = false;
+        //}
+        if (moneyLeft <=0)
         {
             moneyLeft = 0;
-            button1.interactable = false;
-            button2.interactable = false;
-            button3.interactable = false;
         }
+            
+        
         
         lifeText.text = "Lifes: " + baseLifeDecreaseRef.baseLife.ToString();
         moneyText.text = "$: " + moneyLeft.ToString();
