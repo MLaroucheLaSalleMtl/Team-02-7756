@@ -11,9 +11,9 @@ public class EnemyStats : MonoBehaviour
     public Image EnemyHpBar;
     public PlayerAssets code;
     private int reward = 80;
-    
-   
-  
+    public EnemySpawn EnSp;
+
+
 
     public void TakingDamage(float damage)
     {
@@ -23,7 +23,7 @@ public class EnemyStats : MonoBehaviour
         if (Currenthealth <= 0)
         {
             Destroy(gameObject);
-            EnemySpawn.enemyLeft--;
+            EnSp.EnemyDefeated();
             code.moneyLeft += reward;
         }
     }
@@ -32,6 +32,7 @@ public class EnemyStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        EnSp = FindObjectOfType<EnemySpawn>();
         code = FindObjectOfType<PlayerAssets>();
         Currenthealth = MaxHealth;
     }

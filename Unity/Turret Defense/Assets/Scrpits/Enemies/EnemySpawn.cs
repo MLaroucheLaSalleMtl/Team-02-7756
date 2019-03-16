@@ -5,112 +5,173 @@ using UnityEngine.UI;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
+[System.Serializable]
+
+public class Wave
+
+{
+
+    public int EnemiesPerWave;
+
+    public GameObject Enemy;
+
+}
+
+
 public class EnemySpawn : MonoBehaviour
 {
 
-    [SerializeField] private Transform [] enemies;
-    [SerializeField] private Transform SpawnPos;
-    [SerializeField] private Image healthbar;
-    //public float starthealth = 100f;
-    //private float Currenthealth;
-    private float spawningTime = 4f;
-    private float spwanCountdown = 2f;
-    private int waveNumber = 0;
-    [SerializeField] private int CountEnemy;
-    [SerializeField] private int CurrentEnemy;
+    private float timeBetweenWaves = 3f;
+    private float timer;
     public GameObject WinPanel;
     [SerializeField] public Text UIenemyLeft;
-    private int MaxEnemyLv1 = 30;
-    public static int enemyLeft;
-    public bool Win = false;
+    [SerializeField] public Text UI_WaveDisplay;
 
+    public GameObject NextWave;
+    public Transform SpawnPos;
     public ButtonBlocker index;
-    int sceneIndex;
-    
-    
 
-    // Start is called before the first frame update
 
-    IEnumerator WaveSpawner()
+
+
+    public Wave[] Waves;
+
+
+
+    public float TimeBetweenEnemies = 2f;
+
+    private int _totalEnemiesInCurrentWave;
+
+    public int _enemiesInWaveLeft;
+
+    private int _spawnedEnemies;
+
+
+
+    private int _currentWave;
+
+    private int _totalWaves;
+
+    IEnumerator waveCountDown()
     {
-        for(int i = 0; i < waveNumber; i++)
+        timer = timeBetweenWaves;
+
+        while (timeBetweenWaves >= 0)
         {
-            if (CountEnemy < MaxEnemyLv1)
+            NextWave.GetComponent<Text>().text = "Next Wave : " + timer.ToString();
+            yield return new WaitForSeconds(1);
+            timer--;
+            if (timer <= 0)
             {
-                SpawnEnemy();
-                yield return new WaitForSeconds(1f);
+                timer = 0;
             }
         }
-        waveNumber++;
     }
 
-    //Tianfang march 2nd
-    //public void TakeDamage(float damage)
-    //{
-    //    //enemy take damage as float damage
-    //    Currenthealth -= damage;
-    //    healthbar.fillAmount = Currenthealth/starthealth;
-    //    if (Currenthealth<=0)
-    //    {
-    //        Destroy(gameObject);
-    //        Destroy(healthbar);
-    //        enemyLeft--;
-    //    }
-    //}
-
-    void SpawnEnemy()
-    {
-        
-        Transform enemy = enemies[Random.Range(0, enemies.Length)];
-        Instantiate(enemy.gameObject,SpawnPos.position,SpawnPos.rotation);
-        CountEnemy++;
-       // healthbar.transform.SetParent(healthbar.transform, false);
-    }
     void Start()
+
     {
-        
-        enemyLeft = MaxEnemyLv1;
-        //Transform enemy = enemies[Random.Range(0, enemies.Length)];
-        //Instantiate(enemy.gameObject, SpawnPos.position, SpawnPos.rotation);
-        Win = false;
-        sceneIndex = SceneManager.GetActiveScene().buildIndex;
-       
-        
+
+        _currentWave = -1;
+
+        _totalWaves = Waves.Length - 1;
+
+
+        StartNextWave();
+
+
     }
 
-    // Update is called once per frame
+
+
+    void StartNextWave()
+
+    {
+
+        _currentWave++;
+
+
+        if (_currentWave > _totalWaves)
+
+        {
+
+            return;
+
+        }
+
+
+        _totalEnemiesInCurrentWave = Waves[_currentWave].EnemiesPerWave;
+        _enemiesInWaveLeft = Waves[_currentWave].EnemiesPerWave;
+
+        //_enemiesInWaveLeft = 0;
+
+        _spawnedEnemies = 0;
+
+
+
+        StartCoroutine(SpawnEnemies());
+
+    }
+
+
+    IEnumerator SpawnEnemies()
+
+    {
+
+        GameObject enemy = Waves[_currentWave].Enemy;
+
+        while (_spawnedEnemies < _totalEnemiesInCurrentWave)
+
+        {
+
+            _spawnedEnemies++;
+            Instantiate(enemy, SpawnPos.position, SpawnPos.rotation);
+
+            yield return new WaitForSeconds(TimeBetweenEnemies);
+
+        }
+
+        yield return null;
+
+    }
+
     void Update()
     {
-        UIenemyLeft.text = "Enemies Left: " + enemyLeft;
-        GameObject[] enemyAlive = GameObject.FindGameObjectsWithTag("Enemy");
-        CurrentEnemy = enemyAlive.Length;
-        
-        if (spwanCountdown <= 0f)
-        {
-            StartCoroutine(WaveSpawner());
-            spwanCountdown = spawningTime;
-        }
-        spwanCountdown -= Time.deltaTime;
+        int currentDisplayWave = _currentWave + 1;
 
-        if (CountEnemy == MaxEnemyLv1 && CurrentEnemy == 0 && Win == false)
+        if (_currentWave >= _totalWaves)
         {
-            Win = true;
-            
-            if (Win)
+            _currentWave = _totalWaves;
+            NextWave.SetActive(false);
+
+            if (_enemiesInWaveLeft == 0 && _spawnedEnemies == _totalEnemiesInCurrentWave)
             {
                 WinPanel.SetActive(true);
-                Time.timeScale = 0f;
-                //For level block and open design
-              
-                PlayerPrefs.SetInt("levelReached", 2);
-               
-                //Plays win music   
-                FindObjectOfType<AudioManager>().Play("WinMusic");
-
-
             }
         }
-        //tianfang march 2nd
-        //    healthbar.transform.position = Camera.main.WorldToScreenPoint(Vector3.up * 1) + transform.position;
+        UI_WaveDisplay.text = "Waves: " + currentDisplayWave + " / " + Waves.Length;
+        UIenemyLeft.text = "Enemies Left: " + _enemiesInWaveLeft;
+
+
     }
+
+
+
+    public void EnemyDefeated()
+
+    {
+
+        _enemiesInWaveLeft--;
+
+
+        if (_enemiesInWaveLeft == 0 && _spawnedEnemies == _totalEnemiesInCurrentWave)
+
+        {
+
+            Invoke("StartNextWave", timeBetweenWaves);
+            StartCoroutine(waveCountDown());
+        }
+
+    }
+
 }
