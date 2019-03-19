@@ -1103,6 +1103,7 @@ MonoBehaviour:
   Currenthealth: 0
   EnemyHpBar: {fileID: 4832655494434417829}
   code: {fileID: 0}
+  EnSp: {fileID: 0}
 --- !u!114 &1994833347987703307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1115,7 +1116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d69cfc80ffdff242b5f5d0571538e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 8
 --- !u!136 &6351090583369975759
 CapsuleCollider:
   m_ObjectHideFlags: 0

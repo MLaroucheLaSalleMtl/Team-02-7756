@@ -6,7 +6,7 @@ using UnityEngine;
   {
     public float baseLife = 10f;
     public bool lostLiffe;
-
+    public EnemySpawn loseLife;
 
 
     public void LostLife()
@@ -18,6 +18,7 @@ using UnityEngine;
     {
         if (col.gameObject.tag == "Enemy")
         {
+            loseLife.EnemyDefeated();
             Debug.Log("lost life baby");
             lostLiffe = true;
             LostLife();
@@ -27,6 +28,7 @@ using UnityEngine;
     // Start is called before the first frame update
     void Start()
     {
+        loseLife = FindObjectOfType<EnemySpawn>();
         lostLiffe = false;
     }
 
