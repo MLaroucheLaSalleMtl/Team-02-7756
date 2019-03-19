@@ -20,10 +20,9 @@ public class Wave
 
 public class EnemySpawn : MonoBehaviour
 {
-
+    GameManager code;
     private float timeBetweenWaves = 3f;
     private float timer;
-    public GameObject WinPanel;
     [SerializeField] public Text UIenemyLeft;
     [SerializeField] public Text UI_WaveDisplay;
 
@@ -71,6 +70,7 @@ public class EnemySpawn : MonoBehaviour
     void Start()
 
     {
+        code = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         _currentWave = -1;
 
@@ -146,7 +146,7 @@ public class EnemySpawn : MonoBehaviour
 
             if (_enemiesInWaveLeft == 0 && _spawnedEnemies == _totalEnemiesInCurrentWave)
             {
-                WinPanel.SetActive(true);
+                code.winGame();
             }
         }
         UI_WaveDisplay.text = "Waves: " + currentDisplayWave + " / " + Waves.Length;

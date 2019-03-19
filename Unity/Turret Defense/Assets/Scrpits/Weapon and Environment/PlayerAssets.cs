@@ -5,15 +5,13 @@ using UnityEngine.UI;
 
 public class PlayerAssets: MonoBehaviour
 {
+    GameManager code;
     [SerializeField] private Text lifeText;
     [SerializeField] private Text moneyText;
 
     [SerializeField] private Button button1;
     [SerializeField] private Button button2;
     [SerializeField] private Button button3;
-
-    [SerializeField] private GameObject GameOverMenu;
-    [SerializeField] private bool isGameOver = false;
 
     private BuildTurret buildTurretRref;
 
@@ -30,6 +28,8 @@ public class PlayerAssets: MonoBehaviour
     
     void Start()
     {
+        code = GameObject.Find("GameManager").GetComponent<GameManager>();
+
         baseLifeDecreaseRef = FindObjectOfType<BaseLifeDescrease>();
         weaponSelectionRef = FindObjectOfType<WeaponSelection>();
         moneyLeft = starterMoney;
@@ -78,15 +78,9 @@ public class PlayerAssets: MonoBehaviour
         moneyText.text = "$: " + moneyLeft.ToString();
 
 
-        if (baseLifeDecreaseRef.baseLife <= 0&& !isGameOver )
+        if (baseLifeDecreaseRef.baseLife <= 0)
         {
-            isGameOver = true;
-            GameOverMenu.SetActive(true);
-            Time.timeScale = 0f;
-            if (isGameOver && GameOverMenu)
-            {
-                FindObjectOfType<AudioManager>().Play("LoseMusic");
-            }
+            code.GameOver();
         }
         
     }
