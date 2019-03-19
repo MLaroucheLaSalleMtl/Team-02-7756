@@ -326,6 +326,36 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1689308997}
+    - target: {fileID: 7071490592910566850, guid: 3a3b63b0bd805ef49879fa0fb9c6edcb,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071490592910566850, guid: 3a3b63b0bd805ef49879fa0fb9c6edcb,
+        type: 3}
+      propertyPath: m_MinValue
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071490592910566850, guid: 3a3b63b0bd805ef49879fa0fb9c6edcb,
+        type: 3}
+      propertyPath: m_Value
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071323049734192988, guid: 3a3b63b0bd805ef49879fa0fb9c6edcb,
+        type: 3}
+      propertyPath: m_MinValue
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071323049734192988, guid: 3a3b63b0bd805ef49879fa0fb9c6edcb,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071323049734192988, guid: 3a3b63b0bd805ef49879fa0fb9c6edcb,
+        type: 3}
+      propertyPath: m_WholeNumbers
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a3b63b0bd805ef49879fa0fb9c6edcb, type: 3}
 --- !u!224 &242188563 stripped

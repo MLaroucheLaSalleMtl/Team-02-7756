@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private GameObject GameOverMenu;
-    private bool isGameOver = false;
-    private GameObject WinPanel;
-    private bool isWin = false;
+    [SerializeField] private GameObject GameOverMenu;
+    [SerializeField] private bool isGameOver = false;
+    [SerializeField] private GameObject WinPanel;
+    [SerializeField] private bool isWin = false;
 
 
 
@@ -30,20 +30,26 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         isGameOver = true;
-        GameOverMenu.SetActive(true);
+       
         if (isGameOver)
         {
-            FindObjectOfType<AudioManager>().Play("LoseMusic");
+            GameOverMenu.SetActive(true);
+            //FindObjectOfType<AudioManager>().Play("LoseMusic");
+            Time.timeScale = 0f;
+            
         }
     }
 
     public void winGame()
     {
         isWin = true;
-        WinPanel.SetActive(true);
+        
         if (isWin)
         {
-            FindObjectOfType<AudioManager>().Play("WinMusic");
+            WinPanel.SetActive(true);
+            //FindObjectOfType<AudioManager>().Play("WinMusic");
+            Time.timeScale = 0f;
+            
         }
     }
 }
