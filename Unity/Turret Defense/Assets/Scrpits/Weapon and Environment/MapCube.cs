@@ -11,7 +11,13 @@ public class MapCube : MonoBehaviour
     private GameObject turret;
     private Vector3 posOffset_CannonTower;
 
-    private PlayerAssets playerAssetsRef;
+
+
+    public PlayerAssets playerAssetsRef;
+    private WeaponSelection weaponSelectionRef;
+    
+
+    public int turretPrice;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +27,7 @@ public class MapCube : MonoBehaviour
        
 
         playerAssetsRef = FindObjectOfType<PlayerAssets>();
+        weaponSelectionRef = FindObjectOfType<WeaponSelection>();
     }
 
     void OnMouseEnter()
@@ -56,7 +63,10 @@ public class MapCube : MonoBehaviour
         }
 
         GameObject turretToBuild = BuildTurret.myInstance.GetTurrettoBuild();
+        turretPrice = BuildTurret.myInstance.GetTurretPrice();
         turret = (GameObject)Instantiate(turretToBuild, transform.position, transform.rotation);
+        playerAssetsRef.MoneyDeduction(turretPrice);
+
 
         BuildTurret.myInstance.SetTurretToBuildToBeEmpty();
         

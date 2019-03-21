@@ -7,7 +7,7 @@ public class PlayerAssets: MonoBehaviour
 {
     GameManager code;
     [SerializeField] private Text lifeText;
-    [SerializeField] private Text moneyText;
+    [SerializeField] Text moneyText;
 
     [SerializeField] private Button button1;
     [SerializeField] private Button button2;
@@ -52,21 +52,7 @@ public class PlayerAssets: MonoBehaviour
         button2.interactable = (moneyLeft < 200) ? false : true;
         
 
-        //if (moneyLeft < 100)
-        //{
-        //    button1.interactable = false;
-        //    button3.interactable = false;
-        //}
-        //else
-        //{
-        //    button1.interactable = true;
-        //    button3.interactable = true;
-        //}
-            
-        //if (moneyLeft < 200)
-        //{
-        //    button2.interactable = false;
-        //}
+        
         if (moneyLeft <=0)
         {
             moneyLeft = 0;
@@ -85,6 +71,10 @@ public class PlayerAssets: MonoBehaviour
         
     }
 
-    
+    public void MoneyDeduction(int Money)
+    {
+        Debug.Log("moneyLeft " + Money);
+        moneyLeft -= Money;
+    }
     
 }

@@ -9,7 +9,7 @@ public class BuildTurret : MonoBehaviour
     public GameObject turret_2;
     public GameObject turret_3;
     public GameObject turretToBuild;
-
+    public int turretPrice;
     
     void Awake()
     {
@@ -20,14 +20,20 @@ public class BuildTurret : MonoBehaviour
     }
 
     
-    public void TurretSelection(GameObject turret)
+    public void TurretSelection(GameObject turret,int price)
     {
         turretToBuild = turret;
+        turretPrice = price;
         
     }
     public GameObject GetTurrettoBuild()
     {
         return turretToBuild;
+    }
+
+    public int GetTurretPrice()
+    {
+        return turretPrice;
     }
 
     public void SetTurretToBuildToBeEmpty()
