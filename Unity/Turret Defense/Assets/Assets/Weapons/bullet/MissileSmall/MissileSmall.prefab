@@ -170,6 +170,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExplosionEffect: {fileID: 100006, guid: 7c442b9b6852b8a4f93306f3d154d471, type: 3}
   bulletSpeed: 30
+  BulletDamage: 20
+  enemies: {fileID: 0}
+  bulletType: 2
 --- !u!65 &918586310960754461
 BoxCollider:
   m_ObjectHideFlags: 0

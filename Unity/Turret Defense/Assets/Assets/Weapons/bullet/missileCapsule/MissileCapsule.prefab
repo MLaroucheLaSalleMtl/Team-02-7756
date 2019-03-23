@@ -96,7 +96,8 @@ MonoBehaviour:
   ExplosionEffect: {fileID: 100006, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
   bulletSpeed: 35
   BulletDamage: 20
-  enemy: {fileID: 741195814, guid: b1456b43dbe6b78469ac884392524463, type: 3}
+  enemies: {fileID: 0}
+  bulletType: 1
 --- !u!65 &869264562906640180
 BoxCollider:
   m_ObjectHideFlags: 0

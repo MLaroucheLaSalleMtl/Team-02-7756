@@ -10,9 +10,17 @@ public class EnemyStats : MonoBehaviour
     [SerializeField] public float Currenthealth;
     public Image EnemyHpBar;
     public PlayerAssets code;
-    private int reward = 80;
+    private int Reward_Normal_Fast = 80;
+    private int Reward_Boss = 200;
     public EnemySpawn EnSp;
 
+   public enum EnemyType
+    {
+        Normal,
+        Fast,
+        Boss
+    }
+    public EnemyType ENEMYTYPE;
 
 
     public void TakingDamage(float damage)
@@ -24,7 +32,15 @@ public class EnemyStats : MonoBehaviour
         {
             Destroy(gameObject);
             EnSp.EnemyDefeated();
-            code.moneyLeft += reward;
+
+            if (ENEMYTYPE == EnemyType.Normal || ENEMYTYPE == EnemyType.Fast)
+            {
+                code.moneyLeft += Reward_Normal_Fast;
+            }
+            else if (ENEMYTYPE == EnemyType.Boss)
+            {
+                code.moneyLeft += Reward_Boss;
+            }
         }
     }
 

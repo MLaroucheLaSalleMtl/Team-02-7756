@@ -7,21 +7,87 @@ public class BulletBehaviour : MonoBehaviour
     [SerializeField] private GameObject ExplosionEffect;
     private Transform target;
     [SerializeField] private float bulletSpeed = 5f;
-    [SerializeField] private float BulletDamage = 20f;
-    //public GameObject enemy;
-
-    private void OnTriggerEnter(Collider col)
+    private float BulletDamage = 50f;
+    public EnemyStats enemies;
+   // [SerializeField] public GameObject SpecialTarget;
+    
+    public enum BulletType
     {
-        if (col.gameObject.tag == "Enemy")
+        MachineGunBullet,
+        CannonBullet,
+        MissileBullet
+    }
+    public BulletType bulletType;
+
+     void OnTriggerEnter(Collider col)
+    {
+        
+        //Machine Gun Behavior
+
+        if (col.GetComponent<Tag_Normal>() != null && col.gameObject.tag=="Enemy" && bulletType==BulletType.MachineGunBullet)
         {
-            
             EnemyStats Myenemy = target.GetComponent<EnemyStats>();
-            Myenemy.TakingDamage(BulletDamage);
-            GameObject cloneEffect = (GameObject)Instantiate(ExplosionEffect,target.transform.position,target.transform.rotation);
+            Myenemy.TakingDamage(BulletDamage*2);
+            GameObject cloneEffect = (GameObject)Instantiate(ExplosionEffect, target.transform.position, target.transform.rotation);
             Instantiate(cloneEffect);
             Destroy(cloneEffect, 2f);
             Destroy(gameObject);
         }
+
+
+        if ((col.GetComponent<Tag_Fast>()!=null||col.GetComponent<Tag_Boss>()!=null) && bulletType == BulletType.MachineGunBullet && col.gameObject.tag == "Enemy")
+        {
+            //  && enemies.enemyTypee == EnemyStats.enemyType.Normal
+            EnemyStats Myenemy = target.GetComponent<EnemyStats>();
+            Myenemy.TakingDamage(BulletDamage*0.5f);
+            GameObject cloneEffect = (GameObject)Instantiate(ExplosionEffect, target.transform.position, target.transform.rotation);
+            Instantiate(cloneEffect);
+            Destroy(cloneEffect, 2f);
+            Destroy(gameObject);
+
+         }
+
+        //Cannon tower behavior
+        if ((col.GetComponent<Tag_Normal>() != null || col.GetComponent<Tag_Fast>()!=null) && col.gameObject.tag == "Enemy" && bulletType == BulletType.CannonBullet)
+        {
+            EnemyStats Myenemy = target.GetComponent<EnemyStats>();
+            Myenemy.TakingDamage(BulletDamage * 1.5f);
+            GameObject cloneEffect = (GameObject)Instantiate(ExplosionEffect, target.transform.position, target.transform.rotation);
+            Instantiate(cloneEffect);
+            Destroy(cloneEffect, 2f);
+            Destroy(gameObject);
+        }
+        if (col.GetComponent<Tag_Boss>() != null && col.gameObject.tag == "Enemy" && bulletType == BulletType.CannonBullet)
+        {
+            EnemyStats Myenemy = target.GetComponent<EnemyStats>();
+            Myenemy.TakingDamage(BulletDamage*1.5f);
+            GameObject cloneEffect = (GameObject)Instantiate(ExplosionEffect, target.transform.position, target.transform.rotation);
+            Instantiate(cloneEffect);
+            Destroy(cloneEffect, 2f);
+            Destroy(gameObject);
+        }
+
+        //Missile Tower behavior
+        if((col.GetComponent<Tag_Normal>()!=null||col.GetComponent<Tag_Boss>()!=null)&& col.gameObject.tag=="Enemy" && bulletType == BulletType.MissileBullet)
+        {
+            EnemyStats Myenemy = target.GetComponent<EnemyStats>();
+            Myenemy.TakingDamage(BulletDamage *0.8f);
+            GameObject cloneEffect = (GameObject)Instantiate(ExplosionEffect, target.transform.position, target.transform.rotation);
+            Instantiate(cloneEffect);
+            Destroy(cloneEffect, 2f);
+            Destroy(gameObject);
+        }
+        if(col.GetComponent<Tag_Fast>()!=null&&col.gameObject.tag=="Enemy" && bulletType == BulletType.MissileBullet)
+        {
+            EnemyStats Myenemy = target.GetComponent<EnemyStats>();
+            Myenemy.TakingDamage(BulletDamage * 2);
+            GameObject cloneEffect = (GameObject)Instantiate(ExplosionEffect, target.transform.position, target.transform.rotation);
+            Instantiate(cloneEffect);
+            Destroy(cloneEffect, 2f);
+            Destroy(gameObject);
+        }
+
+
     }
 
     public void ChaseTarget(Transform targetRef)
@@ -36,6 +102,10 @@ public class BulletBehaviour : MonoBehaviour
         //Destroy(target.gameObject);
     }
 
+    private void Start()
+    {
+        enemies = GameObject.Find("EnemyStats").GetComponent<EnemyStats>();
+    }
 
     void Update()
     {

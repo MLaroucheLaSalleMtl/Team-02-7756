@@ -7,6 +7,9 @@ TagManager:
   - Nodes
   - Enemy
   - base
+  - EnemyALIENLOD
+  - EnemyCOCO
+  - EnemyMAMA
   layers:
   - Default
   - TransparentFX
