@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5414654604941498722}
-  - component: {fileID: 6563154469799076665}
+  - component: {fileID: 1183874853275781204}
   m_Layer: 0
   m_Name: MissileTower
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6563154469799076665
+--- !u!114 &1183874853275781204
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,13 +42,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 323538535660755443}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 548f1ae93e5738d44bfe80584f933ffd, type: 3}
+  m_Script: {fileID: 11500000, guid: aa43ee5227687414bb790bb3b3b638ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   turretHead: {fileID: 6179471826724117040}
   bulletDemo: {fileID: 1787378473990410, guid: 84f0b7a948feabb499a8ff8ffe7fc5c5, type: 3}
-  Muzz_Missile: {fileID: 100006, guid: f47cb9d88f4bc6c4bb7441e962c2c1a5, type: 3}
+  Muzz_MachineGun: {fileID: 100006, guid: f47cb9d88f4bc6c4bb7441e962c2c1a5, type: 3}
   firePoint: {fileID: 8008054790567111756}
 --- !u!1 &3023854661914802291
 GameObject:
@@ -197,6 +197,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5414654604941498722}
     m_Modifications:
+    - target: {fileID: 100000, guid: 9ce1ad18a73abf04fba11a28752097e7, type: 3}
+      propertyPath: m_Name
+      value: SM_missile_down
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9ce1ad18a73abf04fba11a28752097e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -252,10 +256,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 9ce1ad18a73abf04fba11a28752097e7, type: 3}
       propertyPath: m_LocalScale.z
       value: 6.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9ce1ad18a73abf04fba11a28752097e7, type: 3}
-      propertyPath: m_Name
-      value: SM_missile_down
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9ce1ad18a73abf04fba11a28752097e7, type: 3}
       propertyPath: m_Materials.Array.data[0]

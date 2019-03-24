@@ -52,7 +52,7 @@ public class TurretBehaviour : MonoBehaviour
     {
         Debug.Log("Shoot!");
         GameObject cloneMuzz = (GameObject)Instantiate(Muzz_MachineGun,firePoint.position,firePoint.rotation);
-        Destroy(cloneMuzz, 1f);
+        Destroy(cloneMuzz,0.3f);
         
         GameObject bullet =(GameObject)Instantiate(bulletDemo, firePoint.position, firePoint.rotation);
 
