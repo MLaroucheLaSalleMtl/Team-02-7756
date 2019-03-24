@@ -6,7 +6,7 @@ public class TurretBehaviour : MonoBehaviour
 {
     public Transform target;
     public Transform turretHead;
-    private float targetRange = 30f;
+    [SerializeField] float targetRange = 0.05f;
 
     [SerializeField] private GameObject bulletDemo;
     [SerializeField] private GameObject Muzz_MachineGun;
@@ -50,7 +50,7 @@ public class TurretBehaviour : MonoBehaviour
 
     void Shoot()
     {
-        Debug.Log("Shoot!");
+        //Debug.Log("Shoot!");
         GameObject cloneMuzz = (GameObject)Instantiate(Muzz_MachineGun,firePoint.position,firePoint.rotation);
         Destroy(cloneMuzz,0.3f);
         
