@@ -15,8 +15,9 @@ public class ButtonBlocker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int levelReached = PlayerPrefs.GetInt("levelReached", 1);
 
+        int levelReached = PlayerPrefs.GetInt("levelPassed", 1);
+        Debug.Log("LevelPassed" + levelReached);
 
         for (int i = 0; i < levelButtons.Length; i++)
         {
@@ -44,6 +45,7 @@ public class ButtonBlocker : MonoBehaviour
         levelButtons[8].interactable = false;
         levelButtons[9].interactable = false;
         PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
     }
 
 
