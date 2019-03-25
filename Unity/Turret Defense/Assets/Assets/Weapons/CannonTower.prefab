@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 764366769297914911}
   - component: {fileID: 3006208580002974770}
+  - component: {fileID: 1020003872085272403}
   m_Layer: 0
   m_Name: CannonTower
   m_TagString: Untagged
@@ -78,9 +79,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   turretHead: {fileID: 764366767995682536}
+  targetRange: 7
   bulletDemo: {fileID: 1273679559769204, guid: ff96c31f3b7e9e3418c7de97600b9219, type: 3}
   Muzz_MachineGun: {fileID: 100006, guid: b0a227fc2e558f241b1c747820ccc361, type: 3}
   firePoint: {fileID: 6892238570604504943}
+--- !u!65 &1020003872085272403
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764366769297914909}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9413774, y: 1.6226566, z: 1.7730381}
+  m_Center: {x: -0.018563867, y: 1.6886717, z: 0.07131779}
 --- !u!1 &764366769796338776
 GameObject:
   m_ObjectHideFlags: 0

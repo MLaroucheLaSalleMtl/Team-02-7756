@@ -67,7 +67,16 @@ public class TurretBehaviour : MonoBehaviour
     {
         InvokeRepeating("SearchTarget", 0f, 0.5f);
         
-        
+    }
+
+    private void OnMouseOver()
+    {
+        Debug.Log("In Range");
+    }
+
+    private void OnMouseExit()
+    {
+        Debug.Log("Out Range");
     }
 
     // Update is called once per frame
