@@ -11,7 +11,7 @@ public class TurretBehaviour : MonoBehaviour
     [SerializeField] private GameObject bulletDemo;
     [SerializeField] private GameObject Muzz_MachineGun;
     //[SerializeField] private GameObject Muzz_Point_MachineGun;
-    
+    public GameObject weapeonRange;
   
     [SerializeField] private Transform firePoint;
     private float fireCountDown = 0f;
@@ -62,21 +62,29 @@ public class TurretBehaviour : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        InvokeRepeating("SearchTarget", 0f, 0.5f);
-        
-    }
+   
 
     private void OnMouseOver()
     {
         Debug.Log("In Range");
+        weapeonRange.SetActive(true);
+             
     }
 
     private void OnMouseExit()
     {
         Debug.Log("Out Range");
+        weapeonRange.SetActive(false);
+    }
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        InvokeRepeating("SearchTarget", 0f, 0.5f);
+        Vector3 change = targetRange * new Vector3(1, 1, 1);
+        weapeonRange.transform.localScale += change;
+
     }
 
     // Update is called once per frame
@@ -86,8 +94,6 @@ public class TurretBehaviour : MonoBehaviour
         {
             return;
         }
-
-
 
         Vector3 targetDir = target.position - transform.position;
         Vector3 targetRotation =
