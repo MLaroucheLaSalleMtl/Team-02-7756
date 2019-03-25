@@ -48,6 +48,19 @@ public class ButtonBlocker : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    public void OpenLevelButtons()
+    {
+        levelButtons[0].interactable = true;
+        levelButtons[1].interactable = true;
+        levelButtons[2].interactable = true;
+        levelButtons[3].interactable = true;
+        levelButtons[4].interactable = true;
+        levelButtons[5].interactable = true;
+        levelButtons[6].interactable = true;
+        levelButtons[7].interactable = true;
+        levelButtons[8].interactable = true;
+        levelButtons[9].interactable = true;
+    }
 
 
     // Update is called once per frame
