@@ -234,7 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   turretHead: {fileID: 4861926424269470372}
-  targetRange: 7
+  targetRange: 30
   bulletDemo: {fileID: 1567194746187364, guid: 29f613712c83e684e87ddb421148f2ca, type: 3}
   Muzz_MachineGun: {fileID: 100006, guid: c888f0c922d622147bbdbe2ca794142b, type: 3}
   weapeonRange: {fileID: 460311612099053007}

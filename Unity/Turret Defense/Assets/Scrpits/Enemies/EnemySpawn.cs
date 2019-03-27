@@ -28,8 +28,8 @@ public class EnemySpawn : MonoBehaviour
 
     public GameObject NextWave;
     public Transform SpawnPos;
-     
 
+   
 
 
 

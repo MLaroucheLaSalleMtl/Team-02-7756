@@ -8,7 +8,7 @@ public class BulletBehaviour : MonoBehaviour
     private Transform target;
     [SerializeField] private float bulletSpeed = 5f;
     private float BulletDamage = 50f;
-    public EnemyStats enemies;
+   // public EnemyStats enemies;
    // [SerializeField] public GameObject SpecialTarget;
     
     public enum BulletType
