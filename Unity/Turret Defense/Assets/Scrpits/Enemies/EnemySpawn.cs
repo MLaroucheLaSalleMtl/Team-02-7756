@@ -152,8 +152,8 @@ public class EnemySpawn : MonoBehaviour
 
             }
         }
-        UI_WaveDisplay.text = "Waves: " + currentDisplayWave + " / " + Waves.Length;
-        UIenemyLeft.text = "Enemies Left: " + _enemiesInWaveLeft;
+        UI_WaveDisplay.text = "Waves  " + currentDisplayWave + " / " + Waves.Length;
+        UIenemyLeft.text = "   " + _enemiesInWaveLeft;
 
 
     }
