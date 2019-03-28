@@ -23,8 +23,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010772923418467583}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.492, y: 0.822, z: 0.304}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.652584, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2010772925030217874}
@@ -53,17 +53,17 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010772925030217875}
-  m_LocalRotation: {x: -0, y: -0.18380225, z: -0, w: 0.98296326}
-  m_LocalPosition: {x: 32.841846, y: -0.13, z: -2.1722}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
-  - {fileID: 2010772924669877314}
   - {fileID: 2010772924046996726}
+  - {fileID: 2010772924669877314}
   - {fileID: 7436502075969768990}
   - {fileID: 2010772923418467582}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -21.183, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2010772924047126112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71,41 +71,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2010772925030217874}
     m_Modifications:
-    - target: {fileID: 100022, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
-      propertyPath: m_Name
-      value: SM_glacetower
-      objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.54948246
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.160584
+      value: 1.67
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.33508188
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.1860096
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98254794
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -113,7 +109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 21.44
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -130,6 +126,26 @@ PrefabInstance:
     - target: {fileID: 400022, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
       propertyPath: m_LocalScale.z
       value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
+      propertyPath: m_Name
+      value: SM_glacetower
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400018, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400018, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
@@ -146,21 +162,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2010772925030217874}
     m_Modifications:
-    - target: {fileID: 100002, guid: fa8aecbc40fe1cd40aaf347df2a48e8d, type: 3}
-      propertyPath: m_Name
-      value: SM_glacetower_glace
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: fa8aecbc40fe1cd40aaf347df2a48e8d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.557
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: fa8aecbc40fe1cd40aaf347df2a48e8d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.20941597
+      value: 3.04
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: fa8aecbc40fe1cd40aaf347df2a48e8d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.349
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: fa8aecbc40fe1cd40aaf347df2a48e8d, type: 3}
       propertyPath: m_LocalRotation.x
@@ -180,7 +192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: fa8aecbc40fe1cd40aaf347df2a48e8d, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: fa8aecbc40fe1cd40aaf347df2a48e8d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -206,9 +218,25 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 22
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: fa8aecbc40fe1cd40aaf347df2a48e8d, type: 3}
+      propertyPath: m_Name
+      value: SM_glacetower_glace
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fa8aecbc40fe1cd40aaf347df2a48e8d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0006
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fa8aecbc40fe1cd40aaf347df2a48e8d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: fa8aecbc40fe1cd40aaf347df2a48e8d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: fa8aecbc40fe1cd40aaf347df2a48e8d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa8aecbc40fe1cd40aaf347df2a48e8d, type: 3}
@@ -233,17 +261,17 @@ PrefabInstance:
     - target: {fileID: 8994937976647217456, guid: 759833a66f8709b42a027eef7283a8e6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.52075845
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8994937976647217456, guid: 759833a66f8709b42a027eef7283a8e6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.57158405
+      value: 2.259
       objectReference: {fileID: 0}
     - target: {fileID: 8994937976647217456, guid: 759833a66f8709b42a027eef7283a8e6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.33527505
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8994937976647217456, guid: 759833a66f8709b42a027eef7283a8e6,
         type: 3}

@@ -6,7 +6,7 @@ public class TurretBehaviour : MonoBehaviour
 {
     public Transform target;
     public Transform turretHead;
-    [SerializeField] float targetRange = 0.05f;
+    [SerializeField] float targetRange;
 
     [SerializeField] private GameObject bulletDemo;
     [SerializeField] private GameObject Muzz_MachineGun;

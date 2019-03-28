@@ -8,6 +8,7 @@ public class BuildTurret : MonoBehaviour
     public GameObject turret_1;
     public GameObject turret_2;
     public GameObject turret_3;
+    public GameObject turret_4;
     public GameObject turretToBuild;
     public int turretPrice;
     
