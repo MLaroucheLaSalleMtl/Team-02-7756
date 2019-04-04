@@ -28,6 +28,9 @@ public class EnemySpawn : MonoBehaviour
 
     public GameObject NextWave;
     public Transform SpawnPos;
+     
+    public ParticleSystem money;
+    
 
    
 
@@ -79,7 +82,7 @@ public class EnemySpawn : MonoBehaviour
 
         StartNextWave();
 
-
+        
     }
 
 
@@ -165,12 +168,14 @@ public class EnemySpawn : MonoBehaviour
     {
 
         _enemiesInWaveLeft--;
-
+        
 
         if (_enemiesInWaveLeft == 0 && _spawnedEnemies == _totalEnemiesInCurrentWave)
 
         {
-
+            
+            
+            
             Invoke("StartNextWave", timeBetweenWaves);
             StartCoroutine(waveCountDown());
         }
