@@ -638,6 +638,12 @@ Transform:
   m_Father: {fileID: 1294896300}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &750976033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 750976033, guid: c1935c42f1114124b9f07c5f47cc7699,
+    type: 3}
+  m_PrefabInstance: {fileID: 69398758946927869}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &774817328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1553,6 +1559,7 @@ MonoBehaviour:
   button2: {fileID: 1028572423}
   button3: {fileID: 1989777346}
   button4: {fileID: 1941666003}
+  levelName: {fileID: 750976033}
   starterMoney: 300
   moneyLeft: 0
 --- !u!1 &1618598155
@@ -2417,6 +2424,10 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 669317254}
+    - target: {fileID: 750976035, guid: c1935c42f1114124b9f07c5f47cc7699, type: 3}
+      propertyPath: m_Text
+      value: Level 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1935c42f1114124b9f07c5f47cc7699, type: 3}
 --- !u!1001 &3204007230648023487

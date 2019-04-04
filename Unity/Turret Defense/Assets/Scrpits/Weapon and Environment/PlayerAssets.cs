@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class PlayerAssets: MonoBehaviour
 {
     GameManager code;
@@ -13,6 +14,7 @@ public class PlayerAssets: MonoBehaviour
     [SerializeField] private Button button2;
     [SerializeField] private Button button3;
     [SerializeField] private Button button4;
+    [SerializeField] GameObject levelName;
 
     private BuildTurret buildTurretRref;
 
@@ -29,6 +31,11 @@ public class PlayerAssets: MonoBehaviour
     
     void Start()
     {
+        levelName.SetActive(true);
+
+        StartCoroutine("LevelNameTimer");
+
+
         code = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         baseLifeDecreaseRef = FindObjectOfType<BaseLifeDescrease>();
@@ -36,8 +43,7 @@ public class PlayerAssets: MonoBehaviour
         moneyLeft = starterMoney;
         
 
-        //lifeText.text = baseLifeDecreaseRef.baseLife.ToString();
-        //moneyText.text = moneyLeft.ToString();
+       
     }
 
    
@@ -78,4 +84,12 @@ public class PlayerAssets: MonoBehaviour
         moneyLeft -= Money;
     }
     
+    IEnumerator LevelNameTimer()
+    {
+        yield return  new WaitForSeconds(0.5f);
+        levelName.SetActive(false);
+    }
+
+
+
 }

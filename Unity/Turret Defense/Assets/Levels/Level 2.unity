@@ -1061,8 +1061,15 @@ MonoBehaviour:
   button2: {fileID: 1028572423}
   button3: {fileID: 1989777346}
   button4: {fileID: 1941666003}
+  levelName: {fileID: 1659867702}
   starterMoney: 300
   moneyLeft: 0
+--- !u!1 &1659867702 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 750976033, guid: c1935c42f1114124b9f07c5f47cc7699,
+    type: 3}
+  m_PrefabInstance: {fileID: 69398758946927869}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1667797033
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,11 +1326,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 69398758679401898, guid: c1935c42f1114124b9f07c5f47cc7699,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 69398758679401894, guid: c1935c42f1114124b9f07c5f47cc7699,
         type: 3}
