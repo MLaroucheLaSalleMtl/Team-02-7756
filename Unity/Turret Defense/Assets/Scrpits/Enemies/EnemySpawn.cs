@@ -60,7 +60,7 @@ public class EnemySpawn : MonoBehaviour
 
         while (timeBetweenWaves >= 0)
         {
-            NextWave.GetComponent<Text>().text = "Next Wave : " + timer.ToString();
+            NextWave.GetComponent<Text>().text = timer.ToString();
             yield return new WaitForSeconds(1);
             timer--;
             if (timer <= 0)
@@ -155,8 +155,8 @@ public class EnemySpawn : MonoBehaviour
 
             }
         }
-        UI_WaveDisplay.text = "Waves  " + currentDisplayWave + " / " + Waves.Length;
-        UIenemyLeft.text = "   " + _enemiesInWaveLeft;
+        UI_WaveDisplay.text = currentDisplayWave + " / " + Waves.Length;
+        UIenemyLeft.text = _enemiesInWaveLeft.ToString();
 
 
     }
