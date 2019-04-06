@@ -14,6 +14,9 @@ public class EnemyStats : MonoBehaviour
     private int Reward_Boss = 200;
     public EnemySpawn EnSp;
 
+    public float OldSpeed;
+    private float NewStartSpeed;
+    
    public enum EnemyType
     {
         Normal,
@@ -22,6 +25,11 @@ public class EnemyStats : MonoBehaviour
     }
     public EnemyType ENEMYTYPE;
 
+    public void Slow(float value)
+    {
+        OldSpeed = NewStartSpeed * (1f - value);
+      //  enmMove.speed = enmMove.StartSpeed*(1f - value);
+    }
 
     public void TakingDamage(float damage)
     {
@@ -48,6 +56,8 @@ public class EnemyStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       
+       // enmMove = FindObjectOfType<enemyMove>();
         EnSp = FindObjectOfType<EnemySpawn>();
         code = FindObjectOfType<PlayerAssets>();
         Currenthealth = MaxHealth;
@@ -56,7 +66,9 @@ public class EnemyStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        OldSpeed = gameObject.GetComponent<enemyMove>().speed;
+        NewStartSpeed = gameObject.GetComponent<enemyMove>().StartSpeed;
+
         //countDownEnemy = EnemySpawn.enemyLeft;
     }
 }

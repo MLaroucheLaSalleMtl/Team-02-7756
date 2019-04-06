@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4987660430325212
 Transform:
   m_ObjectHideFlags: 0
@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 33178402099499376}
   - component: {fileID: 23431922708292612}
   - component: {fileID: 3674534667148543755}
+  - component: {fileID: 1243952315451339007}
   m_Layer: 0
   m_Name: MissileViking
   m_TagString: Untagged
@@ -123,7 +124,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd71f9fbe5afee4183d5c57b10a8ed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExplosionEffect: {fileID: 0}
   bulletSpeed: 8
+  bulletType: 0
+--- !u!64 &1243952315451339007
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505355089897114}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300022, guid: 8877092c49d4cd445a536cee36849209, type: 3}
 --- !u!1 &1992789676109812
 GameObject:
   m_ObjectHideFlags: 0

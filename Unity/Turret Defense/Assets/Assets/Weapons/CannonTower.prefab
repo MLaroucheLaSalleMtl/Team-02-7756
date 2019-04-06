@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   turretHead: {fileID: 764366767995682536}
-  targetRange: 7
+  targetRange: 30
   bulletDemo: {fileID: 1273679559769204, guid: ff96c31f3b7e9e3418c7de97600b9219, type: 3}
   Muzz_MachineGun: {fileID: 100006, guid: b0a227fc2e558f241b1c747820ccc361, type: 3}
   weapeonRange: {fileID: 6860007926567571967}

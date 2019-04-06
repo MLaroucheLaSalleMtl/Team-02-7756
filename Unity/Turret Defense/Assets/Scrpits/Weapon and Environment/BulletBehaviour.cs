@@ -27,9 +27,9 @@ public class BulletBehaviour : MonoBehaviour
         {
             EnemyStats Myenemy = target.GetComponent<EnemyStats>();
             Myenemy.TakingDamage(BulletDamage );
-            GameObject cloneEffect = (GameObject)Instantiate(ExplosionEffect, target.transform.position, target.transform.rotation);
-            Instantiate(cloneEffect);
-            Destroy(cloneEffect, 2f);
+            //GameObject cloneEffect = (GameObject)Instantiate(ExplosionEffect, target.transform.position, target.transform.rotation);
+            //Instantiate(cloneEffect);
+            //Destroy(cloneEffect, 2f);
             Destroy(gameObject);
         }
 
