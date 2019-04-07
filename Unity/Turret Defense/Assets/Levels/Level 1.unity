@@ -763,17 +763,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d9c24b623d1b3499d501b4ce80bd96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
   UIenemyLeft: {fileID: 1842371876}
   UI_WaveDisplay: {fileID: 6084694283845342479}
   NextWave: {fileID: 6084694283693685576}
   SpawnPos: {fileID: 417957064}
   money: {fileID: 0}
   Waves:
-  - EnemiesPerWave: 5
+  - EnemiesPerWave: 1
     Enemy: {fileID: 924849060, guid: c41312e36904dea43af061cafca2e582, type: 3}
-  - EnemiesPerWave: 10
+  - EnemiesPerWave: 1
     Enemy: {fileID: 1506467177, guid: 3bb962c5a6199e845a1a924373bdf089, type: 3}
-  - EnemiesPerWave: 5
+  - EnemiesPerWave: 1
+    Enemy: {fileID: 741195814, guid: b1456b43dbe6b78469ac884392524463, type: 3}
+  - EnemiesPerWave: 1
     Enemy: {fileID: 741195814, guid: b1456b43dbe6b78469ac884392524463, type: 3}
   TimeBetweenEnemies: 3
   _enemiesInWaveLeft: 0
