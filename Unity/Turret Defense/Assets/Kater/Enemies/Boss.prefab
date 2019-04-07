@@ -594,11 +594,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ea02cad44c82a4a863eabc2e23d149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartSpeed: 10
+  speed: 0
   MaxHealth: 600
   Currenthealth: 0
   EnemyHpBar: {fileID: 1563064914260331321}
-  code: {fileID: 0}
-  EnSp: {fileID: 0}
   ENEMYTYPE: 2
 --- !u!54 &1824044419215858514
 Rigidbody:
@@ -628,7 +628,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d69cfc80ffdff242b5f5d0571538e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!136 &2353122593377579356
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -637,7 +636,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741195814}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 2.083376
   m_Height: 6.465452

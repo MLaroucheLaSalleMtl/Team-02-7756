@@ -8,9 +8,11 @@ public class BulletBehaviour : MonoBehaviour
     private Transform target;
     [SerializeField] private float bulletSpeed = 5f;
     private float BulletDamage = 50f;
-   // public EnemyStats enemies;
-   // [SerializeField] public GameObject SpecialTarget;
-    
+    // public EnemyStats enemies;
+    // [SerializeField] public GameObject SpecialTarget;
+
+   
+
     public enum BulletType
     {
         MachineGunBullet,
@@ -22,16 +24,7 @@ public class BulletBehaviour : MonoBehaviour
 
      void OnTriggerEnter(Collider col)
     {
-        //Glace Tower
-        if ( col.gameObject.tag == "Enemy" && bulletType == BulletType.IceBullet)
-        {
-            EnemyStats Myenemy = target.GetComponent<EnemyStats>();
-            Myenemy.TakingDamage(BulletDamage );
-            //GameObject cloneEffect = (GameObject)Instantiate(ExplosionEffect, target.transform.position, target.transform.rotation);
-            //Instantiate(cloneEffect);
-            //Destroy(cloneEffect, 2f);
-            Destroy(gameObject);
-        }
+        
 
         //Machine Gun Behavior
 
@@ -120,7 +113,7 @@ public class BulletBehaviour : MonoBehaviour
 
     void Update()
     {
-        
+      
        
         if(target == null)
         {

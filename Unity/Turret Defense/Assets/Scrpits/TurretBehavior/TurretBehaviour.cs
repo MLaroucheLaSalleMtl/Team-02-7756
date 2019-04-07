@@ -25,6 +25,9 @@ public class TurretBehaviour : MonoBehaviour
     public LineRenderer lineRenderer;
     public ParticleSystem GlaceImpact;
 
+    [Header("FlameCannon")]
+    public bool Flame = false;
+    public ParticleSystem FlameFireee;
    
 
     void SearchTarget()
@@ -101,6 +104,10 @@ public class TurretBehaviour : MonoBehaviour
     {
         if (target == null)
         {
+            if (Flame)
+            {
+                FlameFireee.Stop();
+            }
             if (Glace)
             {
                 if (lineRenderer.enabled)
@@ -120,8 +127,15 @@ public class TurretBehaviour : MonoBehaviour
             glacetower();
 
         }
+       
         else
         {
+            if(fireCountDown<=0f && Flame == true)
+            {
+                FlameFireee.Play();
+                Shoot();
+                fireCountDown = 1f / fireRate;
+            }
             if (fireCountDown <= 0f)
             {
                 Shoot();

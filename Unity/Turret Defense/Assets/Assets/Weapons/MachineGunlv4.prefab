@@ -234,11 +234,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   turretHead: {fileID: 4861926424269470372}
-  targetRange: 30
+  targetRange: 20
   bulletDemo: {fileID: 1567194746187364, guid: 29f613712c83e684e87ddb421148f2ca, type: 3}
   Muzz_MachineGun: {fileID: 100006, guid: c888f0c922d622147bbdbe2ca794142b, type: 3}
   weapeonRange: {fileID: 460311612099053007}
   firePoint: {fileID: 1799354679282121617}
+  fireRate: 1
+  Glace: 0
+  SlowValue: 0.5
+  DamageOvertime: 50
+  lineRenderer: {fileID: 0}
+  GlaceImpact: {fileID: 0}
+  Flame: 0
+  FlameFireee: {fileID: 0}
 --- !u!65 &8689838041569627152
 BoxCollider:
   m_ObjectHideFlags: 0
