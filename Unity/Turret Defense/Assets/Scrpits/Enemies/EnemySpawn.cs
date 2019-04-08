@@ -20,6 +20,7 @@ public class Wave
 
 public class EnemySpawn : MonoBehaviour
 {
+    PowerUp_DeleteAll NewCode;
     GameManager code; 
     private float timeBetweenWaves = 3f;
     private float timer;
@@ -39,11 +40,11 @@ public class EnemySpawn : MonoBehaviour
 
     public float TimeBetweenEnemies = 2f;
 
-    private int _totalEnemiesInCurrentWave;
+    public int _totalEnemiesInCurrentWave;
 
     public int _enemiesInWaveLeft;
 
-    private int _spawnedEnemies;
+   public int _spawnedEnemies;
 
 
 
@@ -71,7 +72,7 @@ public class EnemySpawn : MonoBehaviour
 
     {
         code = GameObject.Find("GameManager").GetComponent<GameManager>();
-
+        NewCode = FindObjectOfType<PowerUp_DeleteAll>();
         _currentWave = -1;
 
         _totalWaves = Waves.Length - 1;
@@ -167,8 +168,7 @@ public class EnemySpawn : MonoBehaviour
         _enemiesInWaveLeft--;
 
 
-        if (_enemiesInWaveLeft == 0 && _spawnedEnemies == _totalEnemiesInCurrentWave)
-
+        if (_enemiesInWaveLeft == 0 && _spawnedEnemies == _totalEnemiesInCurrentWave )
         {
 
             Invoke("StartNextWave", timeBetweenWaves);
