@@ -16,6 +16,8 @@ public class EnemyStats : MonoBehaviour
     private int Reward_Normal_Fast = 80;
     private int Reward_Boss = 200;
     private EnemySpawn EnSp;
+    public ParticleSystem money;
+    public Transform moneyPosition;
 
     //public float OldSpeed;
     //private float NewStartSpeed;
@@ -41,6 +43,7 @@ public class EnemyStats : MonoBehaviour
         EnemyHpBar.fillAmount = Currenthealth / MaxHealth;
         if (Currenthealth <= 0)
         {
+            Instantiate(money, moneyPosition.position, moneyPosition.rotation);
             Destroy(gameObject);
             EnSp.EnemyDefeated();
 

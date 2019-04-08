@@ -1107,6 +1107,8 @@ MonoBehaviour:
   MaxHealth: 400
   Currenthealth: 0
   EnemyHpBar: {fileID: 4832655494434417829}
+  money: {fileID: 744932690698049080, guid: 488e47dadc5dfec4dbcd3631a5714565, type: 3}
+  moneyPosition: {fileID: 9064901258025850428}
   ENEMYTYPE: 0
 --- !u!114 &1994833347987703307
 MonoBehaviour:
@@ -2037,11 +2039,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 924849063}
     m_Modifications:
-    - target: {fileID: 2507446900661904178, guid: aeb57f31f07c7ad45be37800d532e9d0,
-        type: 3}
-      propertyPath: m_Name
-      value: enemyHp
-      objectReference: {fileID: 0}
     - target: {fileID: 3213074548257175538, guid: aeb57f31f07c7ad45be37800d532e9d0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2147,6 +2144,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2507446900661904178, guid: aeb57f31f07c7ad45be37800d532e9d0,
+        type: 3}
+      propertyPath: m_Name
+      value: enemyHp
+      objectReference: {fileID: 0}
     - target: {fileID: 7515318578005914294, guid: aeb57f31f07c7ad45be37800d532e9d0,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -2227,7 +2229,7 @@ PrefabInstance:
     - target: {fileID: 5323873594443414007, guid: 8aa8a5dc89c5aa6428df12927b236dfd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.69
+      value: 1.68
       objectReference: {fileID: 0}
     - target: {fileID: 5323873594443414007, guid: 8aa8a5dc89c5aa6428df12927b236dfd,
         type: 3}
