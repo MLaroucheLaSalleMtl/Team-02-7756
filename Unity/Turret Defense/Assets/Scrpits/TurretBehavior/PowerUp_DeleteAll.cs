@@ -9,8 +9,10 @@ public class PowerUp_DeleteAll : MonoBehaviour
    
     public float BombDamage = 300f;
     public GameObject ButtonDelet;
-    EnemyStats loseHp;
-    private bool Isbombing = false;
+    private EnemyStats GetMoney;
+    EnemySpawn Destoryy;
+    private int BombReward = 80;
+    private PlayerAssets MoneyCode;
    
     public void SayHi()
     {
@@ -20,24 +22,34 @@ public class PowerUp_DeleteAll : MonoBehaviour
 
     public void DestoryALLL()
     {
-
+        GetMoney = FindObjectOfType<EnemyStats>(); ;
+        MoneyCode = FindObjectOfType<PlayerAssets>();
         GameObject BombEffect= (GameObject) Instantiate(Bomb, PowerPosition.transform.position,PowerPosition.transform.rotation);
-       // Instantiate(BombEffect);
-       
+        // Instantiate(BombEffect);
+        Destroy(BombEffect.gameObject, 2f);
         // Explo.SetActive(true);
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        loseHp = FindObjectOfType<EnemyStats>();
+        // loseHp = FindObjectOfType<EnemyStats>();
+        Destoryy = FindObjectOfType<EnemySpawn>();
        foreach (var AllEnmies in enemies)
         {
+            MoneyCode.moneyLeft += BombReward;
+            ParticleSystem MyMoney = (ParticleSystem)
+                Instantiate(GetMoney.money,GetMoney. moneyPosition.position,GetMoney. moneyPosition.rotation);
 
-            loseHp.TakingDamage(BombDamage);
+            Destroy(MyMoney.gameObject, 2.0f);
+
+            Destoryy.EnemyDefeated();
+            Destroy(AllEnmies);
+           
+           // loseHp.TakingDamage(BombDamage);
             //if (AllEn._enemiesInWaveLeft <= 0)
             //{
             //    Powerzero = true;
             //}
         }
 
-        Destroy(BombEffect, 2f);
+        
        
        
     }

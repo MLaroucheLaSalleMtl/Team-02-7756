@@ -31,7 +31,7 @@ public class EnemySpawn : MonoBehaviour
     public Transform SpawnPos;
    
      
-    public ParticleSystem money;
+   // public ParticleSystem money;
     
     public Wave[] Waves;
 
