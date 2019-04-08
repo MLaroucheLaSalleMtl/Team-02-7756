@@ -22,18 +22,17 @@ public class EnemySpawn : MonoBehaviour
 {
     PowerUp_DeleteAll NewCode;
     GameManager code; 
-    private float timeBetweenWaves = 3f;
-    private float timer;
+    private float timeBetweenWaves = 4f;
+    public float timer;
     [SerializeField] public Text UIenemyLeft;
     [SerializeField] public Text UI_WaveDisplay;
 
     public GameObject NextWave;
     public Transform SpawnPos;
-
    
-
-
-
+     
+    public ParticleSystem money;
+    
     public Wave[] Waves;
 
 
@@ -52,21 +51,20 @@ public class EnemySpawn : MonoBehaviour
 
     private int _totalWaves;
 
-    IEnumerator waveCountDown()
+     void WaveCount()
     {
-        timer = timeBetweenWaves;
-
-        while (timeBetweenWaves >= 0)
+       // timer = timeBetweenWaves;
+        timer--;
+        NextWave.GetComponent<Text>().text = timer.ToString();
+        if (timer <= 1)
         {
-            NextWave.GetComponent<Text>().text = "Next Wave : " + timer.ToString();
-            yield return new WaitForSeconds(1);
-            timer--;
-            if (timer <= 0)
-            {
-                timer = 0;
-            }
+            timer = 1;
+           
         }
+
     }
+
+    
 
     void Start()
 
@@ -80,7 +78,7 @@ public class EnemySpawn : MonoBehaviour
 
         StartNextWave();
 
-
+        
     }
 
 
@@ -138,6 +136,11 @@ public class EnemySpawn : MonoBehaviour
 
     void Update()
     {
+        if (_enemiesInWaveLeft <= 0)
+        {
+            _enemiesInWaveLeft = 0;
+        }
+       
         int currentDisplayWave = _currentWave + 1;
 
         if (_currentWave >= _totalWaves)
@@ -153,8 +156,8 @@ public class EnemySpawn : MonoBehaviour
 
             }
         }
-        UI_WaveDisplay.text = "Waves  " + currentDisplayWave + " / " + Waves.Length;
-        UIenemyLeft.text = "   " + _enemiesInWaveLeft;
+        UI_WaveDisplay.text = currentDisplayWave + " / " + Waves.Length;
+        UIenemyLeft.text = _enemiesInWaveLeft.ToString();
 
 
     }
@@ -166,13 +169,16 @@ public class EnemySpawn : MonoBehaviour
     {
 
         _enemiesInWaveLeft--;
-
+        
 
         if (_enemiesInWaveLeft == 0 && _spawnedEnemies == _totalEnemiesInCurrentWave )
         {
-
-            Invoke("StartNextWave", timeBetweenWaves);
-            StartCoroutine(waveCountDown());
+                     
+                 Invoke("StartNextWave", timeBetweenWaves);
+            timer = timeBetweenWaves;
+            InvokeRepeating("WaveCount", 0, 1f);
+           
+            //StartCoroutine(waveCountDown());
         }
 
     }

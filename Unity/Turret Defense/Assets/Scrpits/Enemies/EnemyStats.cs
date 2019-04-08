@@ -5,15 +5,23 @@ using UnityEngine.UI;
 
 public class EnemyStats : MonoBehaviour
 {
+    public float StartSpeed = 10f;
+ [HideInInspector]
+    public float speed;
    
     [SerializeField]  public float MaxHealth = 50f;
     [SerializeField] public float Currenthealth;
     public Image EnemyHpBar;
-    public PlayerAssets code;
+    private PlayerAssets code;
     private int Reward_Normal_Fast = 80;
     private int Reward_Boss = 200;
-    public EnemySpawn EnSp;
+    private EnemySpawn EnSp;
+    public ParticleSystem money;
+    public Transform moneyPosition;
 
+    //public float OldSpeed;
+    //private float NewStartSpeed;
+    
    public enum EnemyType
     {
         Normal,
@@ -22,6 +30,11 @@ public class EnemyStats : MonoBehaviour
     }
     public EnemyType ENEMYTYPE;
 
+    public void Slow(float value)
+    {
+        speed = StartSpeed * (1f - value);
+      //  enmMove.speed = enmMove.StartSpeed*(1f - value);
+    }
 
     public void TakingDamage(float damage)
     {
@@ -30,6 +43,7 @@ public class EnemyStats : MonoBehaviour
         EnemyHpBar.fillAmount = Currenthealth / MaxHealth;
         if (Currenthealth <= 0)
         {
+            Instantiate(money, moneyPosition.position, moneyPosition.rotation);
             Destroy(gameObject);
             EnSp.EnemyDefeated();
 
@@ -48,6 +62,9 @@ public class EnemyStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+         speed = StartSpeed;
+       // enmMove = FindObjectOfType<enemyMove>();
         EnSp = FindObjectOfType<EnemySpawn>();
         code = FindObjectOfType<PlayerAssets>();
         Currenthealth = MaxHealth;
@@ -56,7 +73,9 @@ public class EnemyStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        //OldSpeed = gameObject.GetComponent<enemyMove>().speed;
+        //NewStartSpeed = gameObject.GetComponent<enemyMove>().StartSpeed;
+
         //countDownEnemy = EnemySpawn.enemyLeft;
     }
 }

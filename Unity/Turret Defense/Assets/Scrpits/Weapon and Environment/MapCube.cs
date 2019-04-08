@@ -63,7 +63,9 @@ public class MapCube : MonoBehaviour
         }
 
         GameObject turretToBuild = BuildTurret.myInstance.GetTurrettoBuild();
+        Debug.Log(turretToBuild.gameObject.name);
         turretPrice = BuildTurret.myInstance.GetTurretPrice();
+        Debug.Log("weapeon price"+turretPrice);
         turret = (GameObject)Instantiate(turretToBuild, transform.position, transform.rotation);
         playerAssetsRef.MoneyDeduction(turretPrice);
 

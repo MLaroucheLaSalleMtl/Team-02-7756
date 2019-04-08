@@ -8,20 +8,24 @@ public class BulletBehaviour : MonoBehaviour
     private Transform target;
     [SerializeField] private float bulletSpeed = 5f;
     private float BulletDamage = 50f;
-   // public EnemyStats enemies;
-   // [SerializeField] public GameObject SpecialTarget;
-    
+    // public EnemyStats enemies;
+    // [SerializeField] public GameObject SpecialTarget;
+
+   
+
     public enum BulletType
     {
         MachineGunBullet,
         CannonBullet,
-        MissileBullet
+        MissileBullet,
+        IceBullet
     }
     public BulletType bulletType;
 
      void OnTriggerEnter(Collider col)
     {
         
+
         //Machine Gun Behavior
 
         if (col.GetComponent<Tag_Normal>() != null && col.gameObject.tag=="Enemy" && bulletType==BulletType.MachineGunBullet)
@@ -109,7 +113,7 @@ public class BulletBehaviour : MonoBehaviour
 
     void Update()
     {
-        
+      
        
         if(target == null)
         {

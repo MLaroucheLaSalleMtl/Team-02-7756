@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class TurretBehaviour : MonoBehaviour
 {
+    private EnemyStats targetEnemy;
     public Transform target;
     public Transform turretHead;
-    [SerializeField] float targetRange = 0.05f;
+    [SerializeField] float targetRange;
 
     [SerializeField] private GameObject bulletDemo;
     [SerializeField] private GameObject Muzz_MachineGun;
@@ -15,8 +16,18 @@ public class TurretBehaviour : MonoBehaviour
   
     [SerializeField] private Transform firePoint;
     private float fireCountDown = 0f;
-    private float fireRate = 1f;
+    public float fireRate = 1f;
 
+    [Header ("Glace Tower")]
+    public bool Glace = false;
+    public float SlowValue = .5f;
+    public float DamageOvertime = 50f;
+    public LineRenderer lineRenderer;
+    public ParticleSystem GlaceImpact;
+
+    [Header("FlameCannon")]
+    public bool Flame = false;
+    public ParticleSystem FlameFireee;
    
 
     void SearchTarget()
@@ -38,6 +49,7 @@ public class TurretBehaviour : MonoBehaviour
         if (enemyInRange != null && enemyDistance <= targetRange)
         {
             target = enemyInRange.transform;
+            targetEnemy = enemyInRange.GetComponent<EnemyStats>();
         }
         else
         {
@@ -90,22 +102,75 @@ public class TurretBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(target == null)
+        if (target == null)
         {
+            if (Flame)
+            {
+                FlameFireee.Stop();
+            }
+            if (Glace)
+            {
+                if (lineRenderer.enabled)
+                {
+                    lineRenderer.enabled = false;
+                    GlaceImpact.Stop();
+                }
+                   
+            }
+
             return;
         }
+            LockTarget();
 
-        Vector3 targetDir = target.position - transform.position;
-        Vector3 targetRotation =
-        Quaternion.Lerp(turretHead.rotation, Quaternion.LookRotation(targetDir), Time.deltaTime * 5f).eulerAngles;
-        turretHead.rotation = Quaternion.Euler(0f, targetRotation.y, 0f);
-
-        if (fireCountDown <= 0f)
+        if (Glace)
         {
-            Shoot();
-            fireCountDown = 1f / fireRate;
+            glacetower();
+
+        }
+       
+        else
+        {
+            if(fireCountDown<=0f && Flame == true)
+            {
+                FlameFireee.Play();
+                Shoot();
+                fireCountDown = 1f / fireRate;
+            }
+            if (fireCountDown <= 0f)
+            {
+                Shoot();
+                fireCountDown = 1f / fireRate;
+            }
+
+            fireCountDown -= Time.deltaTime;
+        }
+    }
+
+        void LockTarget()
+        {
+
+            Vector3 targetDir = target.position - transform.position;
+            Vector3 targetRotation =
+            Quaternion.Lerp(turretHead.rotation, Quaternion.LookRotation(targetDir), Time.deltaTime * 5f).eulerAngles;
+            turretHead.rotation = Quaternion.Euler(0f, targetRotation.y, 0f);
         }
 
-        fireCountDown -= Time.deltaTime;
+
+        void glacetower()
+        {
+        targetEnemy.GetComponent<EnemyStats>().TakingDamage(DamageOvertime*Time.deltaTime);
+        targetEnemy.Slow(SlowValue);
+        if (!lineRenderer.enabled)
+        {
+            lineRenderer.enabled = true;
+            GlaceImpact.Play();
+        }
+            lineRenderer.enabled = true;
+        lineRenderer.SetPosition(0, firePoint.position);
+        lineRenderer.SetPosition(1, target.position);
+
+        GlaceImpact.transform.position = target.position;  
+        }
+        
     }
-}
+
