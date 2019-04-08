@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PowerUp_DeleteAll : MonoBehaviour
 {
+
+
+
+    private LightControl miss;
     public GameObject Bomb;
     public Transform PowerPosition;
    
@@ -13,12 +17,12 @@ public class PowerUp_DeleteAll : MonoBehaviour
     EnemySpawn Destoryy;
     private int BombReward = 80;
     private PlayerAssets MoneyCode;
-   
-    public void SayHi()
-    {
-        Debug.Log("HIIIIIIIIIIIII");
-    }
-   
+    private TurretBehaviour Power;
+    private float PowerFireRate = 7f;
+    private float NewPowerRate;
+
+    public float PowerTimer = 8f;
+    public bool PowerCoolDown = false;
 
     public void DestoryALLL()
     {
@@ -47,12 +51,35 @@ public class PowerUp_DeleteAll : MonoBehaviour
             //{
             //    Powerzero = true;
             //}
-        }
-
-        
-       
-       
+        }      
     }
+
+    public void Accelerating()
+    {
+        InvokeRepeating("Powers", 0f,1f);
+       
+
+    }
+
+    public void Powers()
+    {
+        miss = FindObjectOfType<LightControl>();
+        miss.MisslIght.SetActive(true);
+        PowerTimer--;
+        Power = FindObjectOfType<TurretBehaviour>();
+        GameObject[] CurrentTurret = GameObject.FindGameObjectsWithTag("Turret");
+        Power.fireRate += PowerFireRate;
+        if (PowerTimer <= 0f)
+        {
+            PowerTimer = 0f;
+            CancelInvoke("Powers");
+            PowerCoolDown = true;
+            Power.fireRate = 1;
+            PowerTimer = 8f;
+           miss. MisslIght.SetActive(false);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +89,10 @@ public class PowerUp_DeleteAll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
+        //if (PowerCoolDown == true)
+        //{
+        //    PowerTimer = 4f;
+        //}
     }
 }
