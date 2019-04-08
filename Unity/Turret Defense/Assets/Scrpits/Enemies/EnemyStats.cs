@@ -43,7 +43,11 @@ public class EnemyStats : MonoBehaviour
         EnemyHpBar.fillAmount = Currenthealth / MaxHealth;
         if (Currenthealth <= 0)
         {
-            Instantiate(money, moneyPosition.position, moneyPosition.rotation);
+            ParticleSystem MyMoney=(ParticleSystem)
+                Instantiate(money, moneyPosition.position, moneyPosition.rotation);
+
+            Destroy(MyMoney.gameObject, 2.0f);
+
             Destroy(gameObject);
             EnSp.EnemyDefeated();
 
@@ -56,6 +60,8 @@ public class EnemyStats : MonoBehaviour
                 code.moneyLeft += Reward_Boss;
             }
         }
+        
+
     }
 
     

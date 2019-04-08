@@ -983,15 +983,19 @@ MonoBehaviour:
   SpawnPos: {fileID: 417957064}
   money: {fileID: 0}
   Waves:
-  - EnemiesPerWave: 1
+  - EnemiesPerWave: 10
     Enemy: {fileID: 924849060, guid: c41312e36904dea43af061cafca2e582, type: 3}
-  - EnemiesPerWave: 1
+  - EnemiesPerWave: 30
     Enemy: {fileID: 1506467177, guid: 3bb962c5a6199e845a1a924373bdf089, type: 3}
-  - EnemiesPerWave: 1
+  - EnemiesPerWave: 8
     Enemy: {fileID: 741195814, guid: b1456b43dbe6b78469ac884392524463, type: 3}
-  - EnemiesPerWave: 1
+  - EnemiesPerWave: 6
     Enemy: {fileID: 741195814, guid: b1456b43dbe6b78469ac884392524463, type: 3}
-  TimeBetweenEnemies: 3
+  - EnemiesPerWave: 20
+    Enemy: {fileID: 741195814, guid: b1456b43dbe6b78469ac884392524463, type: 3}
+  - EnemiesPerWave: 30
+    Enemy: {fileID: 741195814, guid: b1456b43dbe6b78469ac884392524463, type: 3}
+  TimeBetweenEnemies: 2
   _totalEnemiesInCurrentWave: 0
   _enemiesInWaveLeft: 0
   _spawnedEnemies: 0
