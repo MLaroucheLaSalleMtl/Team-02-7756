@@ -10,6 +10,8 @@ TagManager:
   - EnemyALIENLOD
   - EnemyCOCO
   - EnemyMAMA
+  - Turret
+  - Cube
   layers:
   - Default
   - TransparentFX

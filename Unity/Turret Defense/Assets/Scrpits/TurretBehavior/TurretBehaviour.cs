@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class TurretBehaviour : MonoBehaviour
 {
+    [SerializeField] public GameObject UIUpgrade;
+  //  private bool currentObject = false;
+    GameObject UI = null;
+   
+
     private EnemyStats targetEnemy;
     public Transform target;
     public Transform turretHead;
@@ -17,6 +22,7 @@ public class TurretBehaviour : MonoBehaviour
     [SerializeField] private Transform firePoint;
     private float fireCountDown = 0f;
     public float fireRate = 1f;
+    public float TowerBaseDamage = 1f;
 
     [Header ("Glace Tower")]
     public bool Glace = false;
@@ -28,7 +34,7 @@ public class TurretBehaviour : MonoBehaviour
     [Header("FlameCannon")]
     public bool Flame = false;
     public ParticleSystem FlameFireee;
-   
+
 
     void SearchTarget()
     {
@@ -78,6 +84,8 @@ public class TurretBehaviour : MonoBehaviour
 
     private void OnMouseOver()
     {
+        UI = UIUpgrade;
+        UIUpgrade.SetActive(true);
         Debug.Log("In Range");
         weapeonRange.SetActive(true);
              
@@ -85,6 +93,8 @@ public class TurretBehaviour : MonoBehaviour
 
     private void OnMouseExit()
     {
+        UI = null;
+        UIUpgrade.SetActive(false);
         Debug.Log("Out Range");
         weapeonRange.SetActive(false);
     }
@@ -102,6 +112,8 @@ public class TurretBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+      
         if (target == null)
         {
             if (Flame)

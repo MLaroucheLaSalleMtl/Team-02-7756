@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class BulletBehaviour : MonoBehaviour
 {
-    [SerializeField] private GameObject ExplosionEffect;
+    TurretBehaviour turret;
+     [SerializeField] private GameObject ExplosionEffect;
     private Transform target;
     [SerializeField] private float bulletSpeed = 5f;
-    private float BulletDamage = 50f;
+    public float BulletDamage = 50f;
     // public EnemyStats enemies;
     // [SerializeField] public GameObject SpecialTarget;
-
+    
    
 
     public enum BulletType
@@ -30,8 +31,9 @@ public class BulletBehaviour : MonoBehaviour
 
         if (col.GetComponent<Tag_Normal>() != null && col.gameObject.tag=="Enemy" && bulletType==BulletType.MachineGunBullet)
         {
+         
             EnemyStats Myenemy = target.GetComponent<EnemyStats>();
-            Myenemy.TakingDamage(BulletDamage*2);
+            Myenemy.TakingDamage(BulletDamage*turret.TowerBaseDamage*2);
             GameObject cloneEffect = (GameObject)Instantiate(ExplosionEffect, target.transform.position, target.transform.rotation);
             Instantiate(cloneEffect);
             Destroy(cloneEffect, 2f);
@@ -43,7 +45,7 @@ public class BulletBehaviour : MonoBehaviour
         {
             //  && enemies.enemyTypee == EnemyStats.enemyType.Normal
             EnemyStats Myenemy = target.GetComponent<EnemyStats>();
-            Myenemy.TakingDamage(BulletDamage*0.5f);
+            Myenemy.TakingDamage(BulletDamage* turret.TowerBaseDamage * 0.5f);
             GameObject cloneEffect = (GameObject)Instantiate(ExplosionEffect, target.transform.position, target.transform.rotation);
             Instantiate(cloneEffect);
             Destroy(cloneEffect, 2f);
@@ -55,7 +57,7 @@ public class BulletBehaviour : MonoBehaviour
         if ((col.GetComponent<Tag_Normal>() != null || col.GetComponent<Tag_Fast>()!=null) && col.gameObject.tag == "Enemy" && bulletType == BulletType.CannonBullet)
         {
             EnemyStats Myenemy = target.GetComponent<EnemyStats>();
-            Myenemy.TakingDamage(BulletDamage * 1.5f);
+            Myenemy.TakingDamage(BulletDamage * turret.TowerBaseDamage * 1.5f);
             GameObject cloneEffect = (GameObject)Instantiate(ExplosionEffect, target.transform.position, target.transform.rotation);
             Instantiate(cloneEffect);
             Destroy(cloneEffect, 2f);
@@ -64,7 +66,7 @@ public class BulletBehaviour : MonoBehaviour
         if (col.GetComponent<Tag_Boss>() != null && col.gameObject.tag == "Enemy" && bulletType == BulletType.CannonBullet)
         {
             EnemyStats Myenemy = target.GetComponent<EnemyStats>();
-            Myenemy.TakingDamage(BulletDamage*1.5f);
+            Myenemy.TakingDamage(BulletDamage* turret.TowerBaseDamage * 1.5f);
             GameObject cloneEffect = (GameObject)Instantiate(ExplosionEffect, target.transform.position, target.transform.rotation);
             Instantiate(cloneEffect);
             Destroy(cloneEffect, 2f);
@@ -75,7 +77,7 @@ public class BulletBehaviour : MonoBehaviour
         if((col.GetComponent<Tag_Normal>()!=null||col.GetComponent<Tag_Boss>()!=null)&& col.gameObject.tag=="Enemy" && bulletType == BulletType.MissileBullet)
         {
             EnemyStats Myenemy = target.GetComponent<EnemyStats>();
-            Myenemy.TakingDamage(BulletDamage *0.8f);
+            Myenemy.TakingDamage(BulletDamage * turret.TowerBaseDamage * 0.8f);
             GameObject cloneEffect = (GameObject)Instantiate(ExplosionEffect, target.transform.position, target.transform.rotation);
             Instantiate(cloneEffect);
             Destroy(cloneEffect, 2f);
@@ -84,7 +86,7 @@ public class BulletBehaviour : MonoBehaviour
         if(col.GetComponent<Tag_Fast>()!=null&&col.gameObject.tag=="Enemy" && bulletType == BulletType.MissileBullet)
         {
             EnemyStats Myenemy = target.GetComponent<EnemyStats>();
-            Myenemy.TakingDamage(BulletDamage * 2);
+            Myenemy.TakingDamage(BulletDamage * turret.TowerBaseDamage * 2);
             GameObject cloneEffect = (GameObject)Instantiate(ExplosionEffect, target.transform.position, target.transform.rotation);
             Instantiate(cloneEffect);
             Destroy(cloneEffect, 2f);
@@ -108,6 +110,7 @@ public class BulletBehaviour : MonoBehaviour
 
     private void Start()
     {
+        turret = FindObjectOfType<TurretBehaviour>();
        // enemies = GameObject.Find("EnemyStats").GetComponent<EnemyStats>();
     }
 
