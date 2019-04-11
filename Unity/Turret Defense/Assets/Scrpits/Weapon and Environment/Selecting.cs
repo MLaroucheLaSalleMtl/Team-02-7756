@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class Selecting : MonoBehaviour
 {
-    
+      public ParticleSystem particle;
+      public Transform particleplace;
+    //public GameObject parti;
     PlayerAssets money;
    // TurretBehaviour firerate;
    private int MachineGunSell = 50;
@@ -27,12 +29,15 @@ public class Selecting : MonoBehaviour
 
     public void Upgradde()
     {
+        Instantiate(particle, particleplace.transform.position, particleplace.transform.rotation);
+
         if (price == PriceForSell.MachineGun)
         {
-
+            //parti.SetActive(true);
+          
             gameObject.GetComponent<TurretBehaviour>().fireRate += 3;
             money.moneyLeft -= 200;
-         
+            //particle.Stop();
         }
         if (price == PriceForSell.Cannon)
         {
