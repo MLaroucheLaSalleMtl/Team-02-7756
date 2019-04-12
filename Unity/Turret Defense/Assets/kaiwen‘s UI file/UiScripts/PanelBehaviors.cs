@@ -7,11 +7,9 @@ using UnityEngine.UI;
 public class PanelBehaviors : MonoBehaviour//, //IPointerEnterHandler
 {
     public GameObject statusPanel;
-    public bool displayInfo = false;
-    public Text rangeText;
+
     public Text targetText;
     public Text priceText;
-    public Text range;
     public Text target;
     public Text price;
     
@@ -36,7 +34,6 @@ public class PanelBehaviors : MonoBehaviour//, //IPointerEnterHandler
     public void OnMouseOver()
     { 
         statusPanel.SetActive(true);
-        rangeText.text = "Range : ";
         targetText.text = "Best Target :";
         priceText.text = "Price :";  
 
