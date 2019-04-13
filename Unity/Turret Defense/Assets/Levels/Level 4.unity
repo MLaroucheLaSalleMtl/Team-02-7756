@@ -14985,6 +14985,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 063cd0b2027953342b4a42a9cc30bfa0,
         type: 3}
+    - target: {fileID: 6091014021972091378, guid: c1935c42f1114124b9f07c5f47cc7699,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: ba3768f47c8b4704fbe19a5c33972b2e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1935c42f1114124b9f07c5f47cc7699, type: 3}
 --- !u!4 &2139591499 stripped

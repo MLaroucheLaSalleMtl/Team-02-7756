@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: "Assets/kaiwen\u2018s UI file/Scenes/MainMenu.unity"
     guid: 97ecf056da2a1ba4fa84bdf7ced074c6
@@ -19,8 +16,8 @@ EditorBuildSettings:
     guid: 1fe47cfb5f33ee049a830b7bc5cd6eab
   - enabled: 1
     path: Assets/Levels/Level 2.unity
-    guid: cebf81274b2ea59419b3cab0f12bebee
+    guid: 65e96019a2d5b224288d21ecfcecc764
   - enabled: 1
     path: Assets/Levels/Level 3.unity
-    guid: 2cb8bafe704b64443a4fc280c52ecbc1
+    guid: e58cfb8b9a7935e4e9381a6323345b55
   m_configObjects: {}
