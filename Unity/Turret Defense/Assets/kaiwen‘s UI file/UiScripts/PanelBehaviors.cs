@@ -10,7 +10,7 @@ public class PanelBehaviors : MonoBehaviour//, //IPointerEnterHandler
 
     public Text targetText;
     public Text priceText;
-    public Text target;
+    public Image target;
     public Text price;
     
 
@@ -34,7 +34,7 @@ public class PanelBehaviors : MonoBehaviour//, //IPointerEnterHandler
     public void OnMouseOver()
     { 
         statusPanel.SetActive(true);
-        targetText.text = "Best Target :";
+        targetText.text = "Favor Target :";
         priceText.text = "Price :";  
 
         
