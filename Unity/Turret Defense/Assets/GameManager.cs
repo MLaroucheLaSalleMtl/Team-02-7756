@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private bool isGameOver = false;
     [SerializeField] private GameObject WinPanel;
     [SerializeField] private bool isWin = false;
+    private PowerUp_DeleteAll button;
 
 
 
@@ -16,7 +17,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
@@ -36,7 +37,7 @@ public class GameManager : MonoBehaviour
             GameOverMenu.SetActive(true);
             //FindObjectOfType<AudioManager>().Play("LoseMusic");
             Time.timeScale = 0f;
-            
+            button.ButtonDelet.SetActive(false);
         }
     }
 
@@ -49,7 +50,8 @@ public class GameManager : MonoBehaviour
             WinPanel.SetActive(true);
             //FindObjectOfType<AudioManager>().Play("WinMusic");
             Time.timeScale = 0f;
-            
+            button.ButtonDelet.SetActive(false);
+
         }
     }
 }

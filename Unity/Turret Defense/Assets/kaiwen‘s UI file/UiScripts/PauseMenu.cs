@@ -6,7 +6,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused;
     public GameObject PausePanel;
-
+    private PowerUp_DeleteAll button;
     
 
     // Update is called once per frame
@@ -31,7 +31,8 @@ public class PauseMenu : MonoBehaviour
         PausePanel.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
-      
+        button.ButtonDelet.SetActive(false);
+
     }
 
     public void Resume()
@@ -39,5 +40,6 @@ public class PauseMenu : MonoBehaviour
         PausePanel.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        button.ButtonDelet.SetActive(true);
     }
 }
