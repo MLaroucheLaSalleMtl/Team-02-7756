@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PowerUp_DeleteAll : MonoBehaviour
 {
 
-
-
+    public float cooldowntimer = 5f;
+    private bool PowerCool = false;
    
     public GameObject Bomb;
     public Transform PowerPosition;
@@ -18,9 +19,10 @@ public class PowerUp_DeleteAll : MonoBehaviour
     private int BombReward = 80;
     private PlayerAssets MoneyCode;
     private TurretBehaviour Power;
- 
 
-   
+    public GameObject disablePanel;
+    public GameObject PowerBUtton;
+    public Text CountDown;
 
     public void DestoryALLL()
     {
@@ -43,6 +45,9 @@ public class PowerUp_DeleteAll : MonoBehaviour
 
             Destoryy.EnemyDefeated();
             Destroy(AllEnmies);
+
+            PowerCool = true;
+           
            
            // loseHp.TakingDamage(BombDamage);
             //if (AllEn._enemiesInWaveLeft <= 0)
@@ -52,17 +57,33 @@ public class PowerUp_DeleteAll : MonoBehaviour
         }      
     }
 
-    
+   
+
     // Start is called before the first frame update
     void Start()
     {
+        PowerBUtton.SetActive(true);
+        disablePanel.SetActive(false);
        // Explo.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        CountDown.text = "CoolDown! " + cooldowntimer.ToString("F0");
+        if (PowerCool == true)
+        {
+            PowerBUtton.SetActive(false);
+            disablePanel.SetActive(true);
+            cooldowntimer -= Time.deltaTime;
+            if (cooldowntimer <= 0)
+            {
+                PowerBUtton.SetActive(true);
+                disablePanel.SetActive(false);
+                cooldowntimer = 5f;
+                PowerCool = false;
+            }
+        }
         //if (PowerCoolDown == true)
         //{
         //    PowerTimer = 4f;
