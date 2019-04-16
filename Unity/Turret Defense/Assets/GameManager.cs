@@ -20,15 +20,15 @@ public class GameManager : MonoBehaviour
     //}
     public GameObject targetTurret = null;
 
-    public void resetUI()
-    {
-        GameObject[] turrets = GameObject.FindGameObjectsWithTag("Turret");
-       for(int i = 0; i < turrets.Length; i++)
-        {
-            turrets[i].GetComponent<TurretBehaviour>().UIUpgrade.SetActive(false);
-            turrets[i].GetComponent<TurretBehaviour>().weapeonRange.SetActive(false);
-        }
-    }
+    //public void resetUI()
+    //{
+    //    GameObject[] turrets = GameObject.FindGameObjectsWithTag("Turret");
+    //   for(int i = 0; i < turrets.Length; i++)
+    //    {
+    //        turrets[i].GetComponent<TurretBehaviour>().UIUpgrade.SetActive(false);
+    //        turrets[i].GetComponent<TurretBehaviour>().weapeonRange.SetActive(false);
+    //    }
+    //}
    
 
     // Start is called before the first frame update
@@ -63,7 +63,12 @@ public class GameManager : MonoBehaviour
                 if( Hit.collider.tag!="Turret")
                 {
                     //    UiActive = false;
-                    resetUI();
+                    GameObject[] turrets = GameObject.FindGameObjectsWithTag("Turret");
+                    for (int i = 0; i < turrets.Length; i++)
+                    {
+                        turrets[i].GetComponent<TurretBehaviour>().UIUpgrade.SetActive(false);
+                        turrets[i].GetComponent<TurretBehaviour>().weapeonRange.SetActive(false);
+                    }
                 }
                 //if (Hit.collider.tag != "Turret")
                 //{
