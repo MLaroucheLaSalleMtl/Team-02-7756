@@ -2577,6 +2577,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419551970}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &427496924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 69398758912431132, guid: c1935c42f1114124b9f07c5f47cc7699,
+    type: 3}
+  m_PrefabInstance: {fileID: 2120833032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &428068173
 GameObject:
   m_ObjectHideFlags: 0
@@ -4515,6 +4521,8 @@ MonoBehaviour:
   isGameOver: 0
   WinPanel: {fileID: 0}
   isWin: 0
+  turrets: []
+  targetTurret: {fileID: 0}
 --- !u!1 &826675151
 GameObject:
   m_ObjectHideFlags: 0
@@ -7202,10 +7210,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 874199661}
     m_Modifications:
-    - target: {fileID: 100000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
-      propertyPath: m_Name
-      value: stone3 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
@@ -7237,6 +7241,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
+      propertyPath: m_Name
+      value: stone3 (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
@@ -7955,6 +7963,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220037683}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1226464411 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 69398759295661372, guid: c1935c42f1114124b9f07c5f47cc7699,
+    type: 3}
+  m_PrefabInstance: {fileID: 2120833032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1236212841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8063,6 +8077,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 883212138, guid: 0a0aa6d5918bb7a47aee6a647b71cff1, type: 3}
+      propertyPath: Normal_ImageCurrentWaveNormal
+      value: 
+      objectReference: {fileID: 1226464411}
+    - target: {fileID: 883212138, guid: 0a0aa6d5918bb7a47aee6a647b71cff1, type: 3}
+      propertyPath: Fast_ImageCurrentWaveFast
+      value: 
+      objectReference: {fileID: 427496924}
+    - target: {fileID: 883212138, guid: 0a0aa6d5918bb7a47aee6a647b71cff1, type: 3}
+      propertyPath: Boss_ImageCurrentWaveBoss
+      value: 
+      objectReference: {fileID: 1486587276}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a0aa6d5918bb7a47aee6a647b71cff1, type: 3}
 --- !u!1 &1260277359
@@ -9941,10 +9967,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 874199661}
     m_Modifications:
-    - target: {fileID: 100000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
-      propertyPath: m_Name
-      value: stone2 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.6830127
@@ -9996,6 +10018,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
+      propertyPath: m_Name
+      value: stone2 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
@@ -10090,6 +10116,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472770112}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1486587276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 69398758457090000, guid: c1935c42f1114124b9f07c5f47cc7699,
+    type: 3}
+  m_PrefabInstance: {fileID: 2120833032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1520629222
 GameObject:
   m_ObjectHideFlags: 0
@@ -14035,10 +14067,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2063602006}
     m_Modifications:
-    - target: {fileID: 100000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
-      propertyPath: m_Name
-      value: stone3 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
@@ -14070,6 +14098,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
+      propertyPath: m_Name
+      value: stone3 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
@@ -14979,17 +15011,17 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 69398759189580841, guid: c1935c42f1114124b9f07c5f47cc7699,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 063cd0b2027953342b4a42a9cc30bfa0,
-        type: 3}
     - target: {fileID: 6091014021972091378, guid: c1935c42f1114124b9f07c5f47cc7699,
         type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: ba3768f47c8b4704fbe19a5c33972b2e,
+        type: 3}
+    - target: {fileID: 69398759189580841, guid: c1935c42f1114124b9f07c5f47cc7699,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 063cd0b2027953342b4a42a9cc30bfa0,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1935c42f1114124b9f07c5f47cc7699, type: 3}

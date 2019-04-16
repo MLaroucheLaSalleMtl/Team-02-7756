@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 3251099397711449098}
   m_Layer: 0
   m_Name: GlaceTower
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,6 +92,7 @@ MonoBehaviour:
   Muzz_MachineGun: {fileID: 100006, guid: c888f0c922d622147bbdbe2ca794142b, type: 3}
   weapeonRange: {fileID: 7198102160431583012}
   firePoint: {fileID: 2010772923418467582}
+  fireCountDown: 0
   fireRate: 1
   TowerBaseDamage: 1
   Glace: 1
@@ -101,6 +102,10 @@ MonoBehaviour:
   GlaceImpact: {fileID: 198000010585806678}
   Flame: 0
   FlameFireee: {fileID: 0}
+  GameMana: {fileID: 0}
+  PowerTimer: 5
+  PowerCoolDown: 0
+  PowerFireRate: 10
 --- !u!114 &720192967574304762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,7 +231,20 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0, y: 2, z: 1.6666667}
+  m_Center: {x: 0.05, y: 2.68, z: -0.14}
+--- !u!65 &6696042904738934683
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8798462310183045817}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 2, z: 1}
+  m_Center: {x: 0, y: 2.86, z: 0}
 --- !u!1 &9081511986390837907
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,10 +282,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2010772924669877314}
     m_Modifications:
-    - target: {fileID: 100004, guid: 55700a754af55ac429f02417b245ae86, type: 3}
-      propertyPath: m_Name
-      value: WFXMR_GazFireBig (Blue)
-      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 55700a754af55ac429f02417b245ae86, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0011
@@ -323,6 +337,10 @@ PrefabInstance:
     - target: {fileID: 400004, guid: 55700a754af55ac429f02417b245ae86, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 55700a754af55ac429f02417b245ae86, type: 3}
+      propertyPath: m_Name
+      value: WFXMR_GazFireBig (Blue)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 55700a754af55ac429f02417b245ae86, type: 3}
       propertyPath: m_IsActive
@@ -387,6 +405,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8775395782522077885, guid: adfc97211fed5d04bbf52204ae4d631f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Turret
+      objectReference: {fileID: 0}
     - target: {fileID: 8775395782522077882, guid: adfc97211fed5d04bbf52204ae4d631f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -395,7 +418,7 @@ PrefabInstance:
     - target: {fileID: 8775395782522077882, guid: adfc97211fed5d04bbf52204ae4d631f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.76
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 8775395782522077882, guid: adfc97211fed5d04bbf52204ae4d631f,
         type: 3}
@@ -445,17 +468,62 @@ PrefabInstance:
     - target: {fileID: 8775395782522077882, guid: adfc97211fed5d04bbf52204ae4d631f,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8775395782522077882, guid: adfc97211fed5d04bbf52204ae4d631f,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8775395782522077882, guid: adfc97211fed5d04bbf52204ae4d631f,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775395782935026523, guid: adfc97211fed5d04bbf52204ae4d631f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775395782935026523, guid: adfc97211fed5d04bbf52204ae4d631f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775395782935026523, guid: adfc97211fed5d04bbf52204ae4d631f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775395782935026523, guid: adfc97211fed5d04bbf52204ae4d631f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 720192967574304762}
+    - target: {fileID: 8775395782935026523, guid: adfc97211fed5d04bbf52204ae4d631f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Upgradde
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775395782935026523, guid: adfc97211fed5d04bbf52204ae4d631f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775395781784483385, guid: adfc97211fed5d04bbf52204ae4d631f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 720192967574304762}
+    - target: {fileID: 8775395781784483385, guid: adfc97211fed5d04bbf52204ae4d631f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Sell
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775395781784483385, guid: adfc97211fed5d04bbf52204ae4d631f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8775395782935026522, guid: adfc97211fed5d04bbf52204ae4d631f,
         type: 3}
@@ -517,51 +585,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 26.307999
       objectReference: {fileID: 0}
-    - target: {fileID: 8775395781784483385, guid: adfc97211fed5d04bbf52204ae4d631f,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 720192967574304762}
-    - target: {fileID: 8775395781784483385, guid: adfc97211fed5d04bbf52204ae4d631f,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Sell
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775395781784483385, guid: adfc97211fed5d04bbf52204ae4d631f,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775395782935026523, guid: adfc97211fed5d04bbf52204ae4d631f,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775395782935026523, guid: adfc97211fed5d04bbf52204ae4d631f,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775395782935026523, guid: adfc97211fed5d04bbf52204ae4d631f,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775395782935026523, guid: adfc97211fed5d04bbf52204ae4d631f,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 720192967574304762}
-    - target: {fileID: 8775395782935026523, guid: adfc97211fed5d04bbf52204ae4d631f,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Upgradde
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775395782935026523, guid: adfc97211fed5d04bbf52204ae4d631f,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adfc97211fed5d04bbf52204ae4d631f, type: 3}
 --- !u!1 &8798462310183045817 stripped
@@ -607,11 +630,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2010772925030217874}
     m_Modifications:
-    - target: {fileID: 314309711571459345, guid: 7d51234a963d75143a2410995ca5176d,
-        type: 3}
-      propertyPath: m_Name
-      value: GlaceImpactEffect
-      objectReference: {fileID: 0}
     - target: {fileID: 311064449583615051, guid: 7d51234a963d75143a2410995ca5176d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -687,6 +705,11 @@ PrefabInstance:
       propertyPath: ShapeModule.radiusThickness
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 314309711571459345, guid: 7d51234a963d75143a2410995ca5176d,
+        type: 3}
+      propertyPath: m_Name
+      value: GlaceImpactEffect
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d51234a963d75143a2410995ca5176d, type: 3}
 --- !u!4 &4000011693693590 stripped
@@ -708,10 +731,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2010772925030217874}
     m_Modifications:
-    - target: {fileID: 100022, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
-      propertyPath: m_Name
-      value: SM_glacetower
-      objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -784,6 +803,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
+      propertyPath: m_Name
+      value: SM_glacetower
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 233a815babc8c6348b7ffe81307c0b10, type: 3}
 --- !u!4 &2010772924046996726 stripped
@@ -799,10 +822,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2010772925030217874}
     m_Modifications:
-    - target: {fileID: 100002, guid: fa8aecbc40fe1cd40aaf347df2a48e8d, type: 3}
-      propertyPath: m_Name
-      value: SM_glacetower_glace
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: fa8aecbc40fe1cd40aaf347df2a48e8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -875,6 +894,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: fa8aecbc40fe1cd40aaf347df2a48e8d, type: 3}
+      propertyPath: m_Name
+      value: SM_glacetower_glace
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa8aecbc40fe1cd40aaf347df2a48e8d, type: 3}
 --- !u!4 &2010772924669877314 stripped
@@ -890,11 +913,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2010772925030217874}
     m_Modifications:
-    - target: {fileID: 8994937976647217457, guid: 759833a66f8709b42a027eef7283a8e6,
-        type: 3}
-      propertyPath: m_Name
-      value: SM_cannon_bot
-      objectReference: {fileID: 0}
     - target: {fileID: 8994937976647217456, guid: 759833a66f8709b42a027eef7283a8e6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -949,6 +967,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8994937976647217457, guid: 759833a66f8709b42a027eef7283a8e6,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_cannon_bot
       objectReference: {fileID: 0}
     - target: {fileID: 8994937976647217455, guid: 759833a66f8709b42a027eef7283a8e6,
         type: 3}

@@ -5,9 +5,8 @@ using UnityEngine;
 public class TurretBehaviour : MonoBehaviour
 {
     [SerializeField] public GameObject UIUpgrade;
-  //  private bool currentObject = false;
-    GameObject UI = null;
-   
+    //  private bool currentObject = false;
+  
 
     private EnemyStats targetEnemy;
     public Transform target;
@@ -20,7 +19,9 @@ public class TurretBehaviour : MonoBehaviour
     public GameObject weapeonRange;
   
     [SerializeField] private Transform firePoint;
+    [SerializeField]
     private float fireCountDown = 0f;
+    [SerializeField]
     public float fireRate = 1f;
     public float TowerBaseDamage = 1f;
 
@@ -35,6 +36,14 @@ public class TurretBehaviour : MonoBehaviour
     public bool Flame = false;
     public ParticleSystem FlameFireee;
 
+    public GameManager GameMana;
+    [SerializeField]
+    public float PowerTimer=5f ;
+    public bool PowerCoolDown = false;
+    [SerializeField]
+    private float PowerFireRate = 10f;
+    private float NewPowerRate;
+  
 
     void SearchTarget()
     {
@@ -81,23 +90,27 @@ public class TurretBehaviour : MonoBehaviour
     }
 
    
-
-    private void OnMouseOver()
+    private void SelecetObject()
     {
-        UI = UIUpgrade;
-        UIUpgrade.SetActive(true);
-        Debug.Log("In Range");
-        weapeonRange.SetActive(true);
+       
+        
+    }
+
+    //private void OnMouseOver()
+    //{
+        
+      
              
-    }
+    //}
 
-    private void OnMouseExit()
-    {
-        UI = null;
-        UIUpgrade.SetActive(false);
-        Debug.Log("Out Range");
-        weapeonRange.SetActive(false);
-    }
+    //private void OnMouseExit()
+    //{
+        
+    //}
+
+    //public void Accelerating()
+    //{
+       
 
 
     // Start is called before the first frame update
@@ -106,14 +119,44 @@ public class TurretBehaviour : MonoBehaviour
         InvokeRepeating("SearchTarget", 0f, 0.5f);
         Vector3 change = targetRange * new Vector3(1, 1, 1);
         weapeonRange.transform.localScale += change;
+        GameMana = FindObjectOfType<GameManager>();
 
     }
+  
+
+    //void Accelerate()
+    //{
+    //    fireRate += 10;
+    //}
 
     // Update is called once per frame
     void Update()
     {
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    RaycastHit Hit;
+        //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //    if (Physics.Raycast(ray, out Hit, 100.0f))
+        //    {
+        //        if (Hit.collider.tag == "Turret")
+        //        {
+        //            UI = UIUpgrade;
+                 
+        //            UI.SetActive(true);
+        //            Debug.Log("In Range");
+        //            weapeonRange.SetActive(true);
+        //        }
+        //        if (Hit.collider.tag != "Turret")
+        //        {
+        //            UI = null;
+        //            UI.SetActive(false);
+        //            Debug.Log("Out Range");
+        //            weapeonRange.SetActive(false);
 
-      
+        //        }
+        //    }
+        //}
+
         if (target == null)
         {
             if (Flame)

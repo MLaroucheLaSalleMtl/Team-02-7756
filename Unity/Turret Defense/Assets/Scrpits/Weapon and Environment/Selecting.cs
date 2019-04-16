@@ -35,13 +35,14 @@ public class Selecting : MonoBehaviour
         {
             //parti.SetActive(true);
           
-            gameObject.GetComponent<TurretBehaviour>().fireRate += 3;
+            gameObject.GetComponent<TurretBehaviour>().fireRate += 2f;
             money.moneyLeft -= 200;
             //particle.Stop();
         }
         if (price == PriceForSell.Cannon)
         {
             gameObject.GetComponent<TurretBehaviour>().TowerBaseDamage *= 2;
+            gameObject.GetComponent<TurretBehaviour>().fireRate += 1.5f;
             money.moneyLeft -= 300;
 
         }
@@ -55,7 +56,7 @@ public class Selecting : MonoBehaviour
         if (price == PriceForSell.Glace)
         {
             money.moneyLeft -= 100;
-            gameObject.GetComponent<TurretBehaviour>().DamageOvertime *= 1.5f;
+            gameObject.GetComponent<TurretBehaviour>().DamageOvertime *= 2f;
             gameObject.GetComponent<TurretBehaviour>().SlowValue *= 1.4f;
 
         }

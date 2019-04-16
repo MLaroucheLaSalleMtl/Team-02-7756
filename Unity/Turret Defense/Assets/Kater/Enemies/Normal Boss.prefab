@@ -910,7 +910,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4d6195afcf33152479cc12aa273446eb, type: 2}
+  - {fileID: 2100000, guid: 77bc5c352603e5045a648bac7c4dc473, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1004,7 +1004,7 @@ GameObject:
   - component: {fileID: 8673634758387444722}
   - component: {fileID: 1548544228704702246}
   m_Layer: 0
-  m_Name: Normal
+  m_Name: Normal Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1019,7 +1019,7 @@ Transform:
   m_GameObject: {fileID: 924849060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.93, y: 0, z: 4.21}
-  m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 2081974583}
   - {fileID: 2046192509}
@@ -1055,16 +1055,15 @@ LODGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924849060}
   serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.07812643, y: 0.8139167, z: 0.0244143}
-  m_Size: 3.076598
+  m_LocalReferencePoint: {x: 0.07548931, y: 0.84509456, z: 0.07081437}
+  m_Size: 2.0767436
   m_FadeMode: 0
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
   - screenRelativeHeight: 0.25
     fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 840094496}
+    renderers: []
   - screenRelativeHeight: 0.125
     fadeTransitionWidth: 0
     renderers:
@@ -1073,7 +1072,7 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 692513403}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!54 &924849064
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1102,9 +1101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ea02cad44c82a4a863eabc2e23d149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartSpeed: 10
+  StartSpeed: 7
   speed: 0
-  MaxHealth: 400
+  MaxHealth: 800
   Currenthealth: 0
   EnemyHpBar: {fileID: 4832655494434417829}
   money: {fileID: 744932690698049080, guid: 488e47dadc5dfec4dbcd3631a5714565, type: 3}
@@ -2172,7 +2171,7 @@ PrefabInstance:
     - target: {fileID: 3606361520566490247, guid: aeb57f31f07c7ad45be37800d532e9d0,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.2454
+      value: 0.24540001
       objectReference: {fileID: 0}
     - target: {fileID: 3606361520566490247, guid: aeb57f31f07c7ad45be37800d532e9d0,
         type: 3}
@@ -2182,7 +2181,7 @@ PrefabInstance:
     - target: {fileID: 3606361520566490247, guid: aeb57f31f07c7ad45be37800d532e9d0,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0045
+      value: -0.004499972
       objectReference: {fileID: 0}
     - target: {fileID: 3606361520566490247, guid: aeb57f31f07c7ad45be37800d532e9d0,
         type: 3}

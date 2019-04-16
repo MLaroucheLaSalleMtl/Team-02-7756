@@ -7,7 +7,7 @@ public class PowerUp_DeleteAll : MonoBehaviour
 
 
 
-    private LightControl miss;
+   
     public GameObject Bomb;
     public Transform PowerPosition;
    
@@ -18,11 +18,9 @@ public class PowerUp_DeleteAll : MonoBehaviour
     private int BombReward = 80;
     private PlayerAssets MoneyCode;
     private TurretBehaviour Power;
-    private float PowerFireRate = 7f;
-    private float NewPowerRate;
+ 
 
-    public float PowerTimer = 8f;
-    public bool PowerCoolDown = false;
+   
 
     public void DestoryALLL()
     {
@@ -54,32 +52,7 @@ public class PowerUp_DeleteAll : MonoBehaviour
         }      
     }
 
-    public void Accelerating()
-    {
-        InvokeRepeating("Powers", 0f,1f);
-       
-
-    }
-
-    public void Powers()
-    {
-        miss = FindObjectOfType<LightControl>();
-        miss.MisslIght.SetActive(true);
-        PowerTimer--;
-        Power = FindObjectOfType<TurretBehaviour>();
-        GameObject[] CurrentTurret = GameObject.FindGameObjectsWithTag("Turret");
-        Power.fireRate += PowerFireRate;
-        if (PowerTimer <= 0f)
-        {
-            PowerTimer = 0f;
-            CancelInvoke("Powers");
-            PowerCoolDown = true;
-            Power.fireRate = 1;
-            PowerTimer = 8f;
-           miss. MisslIght.SetActive(false);
-        }
-    }
-
+    
     // Start is called before the first frame update
     void Start()
     {
