@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9122205611531697766}
   - component: {fileID: 9122205611531697767}
   - component: {fileID: 9122205611531697761}
+  - component: {fileID: 2484282861270769503}
   - component: {fileID: 9122205611531697760}
   m_Layer: 0
   m_Name: GameManager
@@ -88,6 +89,20 @@ MonoBehaviour:
   isWin: 0
   turrets: []
   targetTurret: {fileID: 0}
+--- !u!114 &2484282861270769503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9122205611531697764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2489ef85fce5679479928c681c9cbbaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeButton: {fileID: 0}
+  RewindButton: {fileID: 0}
 --- !u!114 &9122205611531697760
 MonoBehaviour:
   m_ObjectHideFlags: 0

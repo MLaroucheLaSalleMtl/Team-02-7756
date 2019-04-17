@@ -462,6 +462,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GameOver
       objectReference: {fileID: 0}
+    - target: {fileID: 2789924031082313730, guid: 7941543800689744f9d5c07438fffc31,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 842737736}
+    - target: {fileID: 2789924031082313730, guid: 7941543800689744f9d5c07438fffc31,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PressSpeedin
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869743999859672854, guid: 7941543800689744f9d5c07438fffc31,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 842737736}
+    - target: {fileID: 7869743999859672854, guid: 7941543800689744f9d5c07438fffc31,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RewindSpeed
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7941543800689744f9d5c07438fffc31, type: 3}
 --- !u!114 &231599445 stripped
@@ -476,6 +496,12 @@ MonoBehaviour:
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &261618051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 32900718830181706, guid: 7941543800689744f9d5c07438fffc31,
+    type: 3}
+  m_PrefabInstance: {fileID: 149777600}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &265014042 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: e5ebc57fc03b3624fa534a2dc0574457,
@@ -1065,6 +1091,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615850756}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &625502899 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8075104213871992605, guid: 7941543800689744f9d5c07438fffc31,
+    type: 3}
+  m_PrefabInstance: {fileID: 149777600}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &673434076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2083114202889369388, guid: b20bb4a367d264a44b0c420f303aab38,
@@ -1081,6 +1113,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &842737736 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2484282861270769503, guid: 59cb8c45605dbf144a99de6b177c20b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1496239841}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2489ef85fce5679479928c681c9cbbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &874199660
@@ -1484,6 +1528,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 874199661}
     m_Modifications:
+    - target: {fileID: 100000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
+      propertyPath: m_Name
+      value: stone3 (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
@@ -1515,10 +1563,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
-      propertyPath: m_Name
-      value: stone3 (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
@@ -2016,6 +2060,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 874199661}
     m_Modifications:
+    - target: {fileID: 100000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
+      propertyPath: m_Name
+      value: stone2 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.6830127
@@ -2068,10 +2116,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 30
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
-      propertyPath: m_Name
-      value: stone2 (1)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1db637017d60acb4f9383e8712459d4e, type: 3}
 --- !u!1001 &1496239841
@@ -2086,6 +2130,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 9122205611531697761, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: WinPanel
+      value: 
+      objectReference: {fileID: 1009965766}
+    - target: {fileID: 9122205611531697761, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: GameOverMenu
+      value: 
+      objectReference: {fileID: 1852447395}
+    - target: {fileID: 9122205611531697760, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: PowerPosition
+      value: 
+      objectReference: {fileID: 1285447855}
+    - target: {fileID: 9122205611531697760, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: ButtonDelet
+      value: 
+      objectReference: {fileID: 1532844673}
+    - target: {fileID: 9122205611531697760, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: PowerBUtton
+      value: 
+      objectReference: {fileID: 1532844673}
+    - target: {fileID: 9122205611531697760, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: disablePanel
+      value: 
+      objectReference: {fileID: 1063543494}
+    - target: {fileID: 9122205611531697760, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: CountDown
+      value: 
+      objectReference: {fileID: 1263411775}
     - target: {fileID: 9122205611531697766, guid: 59cb8c45605dbf144a99de6b177c20b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2156,41 +2235,6 @@ PrefabInstance:
       propertyPath: UIenemyLeft
       value: 
       objectReference: {fileID: 1009504648}
-    - target: {fileID: 9122205611531697761, guid: 59cb8c45605dbf144a99de6b177c20b0,
-        type: 3}
-      propertyPath: WinPanel
-      value: 
-      objectReference: {fileID: 1009965766}
-    - target: {fileID: 9122205611531697761, guid: 59cb8c45605dbf144a99de6b177c20b0,
-        type: 3}
-      propertyPath: GameOverMenu
-      value: 
-      objectReference: {fileID: 1852447395}
-    - target: {fileID: 9122205611531697760, guid: 59cb8c45605dbf144a99de6b177c20b0,
-        type: 3}
-      propertyPath: PowerPosition
-      value: 
-      objectReference: {fileID: 1285447855}
-    - target: {fileID: 9122205611531697760, guid: 59cb8c45605dbf144a99de6b177c20b0,
-        type: 3}
-      propertyPath: ButtonDelet
-      value: 
-      objectReference: {fileID: 1532844673}
-    - target: {fileID: 9122205611531697760, guid: 59cb8c45605dbf144a99de6b177c20b0,
-        type: 3}
-      propertyPath: PowerBUtton
-      value: 
-      objectReference: {fileID: 1532844673}
-    - target: {fileID: 9122205611531697760, guid: 59cb8c45605dbf144a99de6b177c20b0,
-        type: 3}
-      propertyPath: disablePanel
-      value: 
-      objectReference: {fileID: 1063543494}
-    - target: {fileID: 9122205611531697760, guid: 59cb8c45605dbf144a99de6b177c20b0,
-        type: 3}
-      propertyPath: CountDown
-      value: 
-      objectReference: {fileID: 1263411775}
     - target: {fileID: 9122205612838275297, guid: 59cb8c45605dbf144a99de6b177c20b0,
         type: 3}
       propertyPath: button1
@@ -2226,6 +2270,16 @@ PrefabInstance:
       propertyPath: moneyText
       value: 
       objectReference: {fileID: 1977383653}
+    - target: {fileID: 2484282861270769503, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: TimeButton
+      value: 
+      objectReference: {fileID: 261618051}
+    - target: {fileID: 2484282861270769503, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: RewindButton
+      value: 
+      objectReference: {fileID: 625502899}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59cb8c45605dbf144a99de6b177c20b0, type: 3}
 --- !u!1 &1532844673 stripped
@@ -3022,6 +3076,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2063602006}
     m_Modifications:
+    - target: {fileID: 100000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
+      propertyPath: m_Name
+      value: stone3 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
@@ -3053,10 +3111,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
-      propertyPath: m_Name
-      value: stone3 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5ebc57fc03b3624fa534a2dc0574457, type: 3}
