@@ -30,7 +30,7 @@ public class LevelLoader : MonoBehaviour
         Input.ResetInputAxes();
         System.GC.Collect();//collect the garbage
         Scene currScene = SceneManager.GetActiveScene();
-        async.allowSceneActivation = false;
+        //async.allowSceneActivation = false;
         if (!waitForUserInput)//or (waitForUserInput == false)
         {
             Invoke("Active", delay);//waitting for response
