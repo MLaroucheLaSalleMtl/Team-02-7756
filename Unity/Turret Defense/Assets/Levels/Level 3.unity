@@ -4666,6 +4666,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b13d4468d1324474c91d4fdc88eb6286, type: 3}
+--- !u!82 &801642737 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1136295221617151456, guid: b13d4468d1324474c91d4fdc88eb6286,
+    type: 3}
+  m_PrefabInstance: {fileID: 801642736}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &812638101 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4866144330530078, guid: 7e656eb35c55f2d478c5748f0bd7f815,
@@ -7486,7 +7492,7 @@ PrefabInstance:
     - target: {fileID: 2279215618836988723, guid: 0a0aa6d5918bb7a47aee6a647b71cff1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2279215618836988723, guid: 0a0aa6d5918bb7a47aee6a647b71cff1,
         type: 3}
@@ -9240,7 +9246,7 @@ PrefabInstance:
     - target: {fileID: 4297387343024223161, guid: 2d8f4fe500d8a784e8121dd0dfb4478c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8757771794314794868, guid: 2d8f4fe500d8a784e8121dd0dfb4478c,
         type: 3}
@@ -11148,16 +11154,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 2484282861270769503, guid: 59cb8c45605dbf144a99de6b177c20b0,
-        type: 3}
-      propertyPath: TimeButton
-      value: 
-      objectReference: {fileID: 32900719971884061}
-    - target: {fileID: 2484282861270769503, guid: 59cb8c45605dbf144a99de6b177c20b0,
-        type: 3}
-      propertyPath: RewindButton
-      value: 
-      objectReference: {fileID: 8075104215017758282}
     - target: {fileID: 9122205611531697760, guid: 59cb8c45605dbf144a99de6b177c20b0,
         type: 3}
       propertyPath: PowerPosition
@@ -11193,6 +11189,16 @@ PrefabInstance:
       propertyPath: GameOverMenu
       value: 
       objectReference: {fileID: 1815869946}
+    - target: {fileID: 2484282861270769503, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: TimeButton
+      value: 
+      objectReference: {fileID: 32900719971884061}
+    - target: {fileID: 2484282861270769503, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: RewindButton
+      value: 
+      objectReference: {fileID: 8075104215017758282}
     - target: {fileID: 9122205611531697766, guid: 59cb8c45605dbf144a99de6b177c20b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11231,7 +11237,7 @@ PrefabInstance:
     - target: {fileID: 9122205611531697766, guid: 59cb8c45605dbf144a99de6b177c20b0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9122205611531697766, guid: 59cb8c45605dbf144a99de6b177c20b0,
         type: 3}
@@ -14363,7 +14369,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 3204007230648023488}
           m_MethodName: OnClick
           m_Mode: 1
           m_Arguments:
@@ -15531,7 +15537,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Next Level '
+  m_Text: Play Again
 --- !u!114 &1665015282397095950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16813,9 +16819,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3204007230648023490}
         m_MethodName: BtnLoadScene
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -17115,7 +17121,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 3204007230648023488}
           m_MethodName: OnClick
           m_Mode: 1
           m_Arguments:
@@ -17760,7 +17766,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 3204007230648023488}
           m_MethodName: OnClick
           m_Mode: 1
           m_Arguments:
@@ -18732,7 +18738,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3204007230648023489}
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -18900,6 +18906,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 3204007231299911993, guid: 3bd118dd73f43ca45a75251f3a3ff311,
+        type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 801642737}
     - target: {fileID: 3204007231299911995, guid: 3bd118dd73f43ca45a75251f3a3ff311,
         type: 3}
       propertyPath: PauseMenuUI
@@ -18909,12 +18920,7 @@ PrefabInstance:
         type: 3}
       propertyPath: PausePanel
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3204007231299911993, guid: 3bd118dd73f43ca45a75251f3a3ff311,
-        type: 3}
-      propertyPath: source
-      value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1675523759}
     - target: {fileID: 3204007231299911996, guid: 3bd118dd73f43ca45a75251f3a3ff311,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18953,7 +18959,7 @@ PrefabInstance:
     - target: {fileID: 3204007231299911996, guid: 3bd118dd73f43ca45a75251f3a3ff311,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3204007231299911996, guid: 3bd118dd73f43ca45a75251f3a3ff311,
         type: 3}
@@ -18972,6 +18978,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bd118dd73f43ca45a75251f3a3ff311, type: 3}
+--- !u!114 &3204007230648023488 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3204007231299911993, guid: 3bd118dd73f43ca45a75251f3a3ff311,
+    type: 3}
+  m_PrefabInstance: {fileID: 3204007230648023487}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c69030fa2a4cfc43a4fd7f8ee37106c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3204007230648023489 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3204007231299911995, guid: 3bd118dd73f43ca45a75251f3a3ff311,
+    type: 3}
+  m_PrefabInstance: {fileID: 3204007230648023487}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa51c8561e6d5d439f17050ddb2fa90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3204007230648023490 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3204007231299911994, guid: 3bd118dd73f43ca45a75251f3a3ff311,
+    type: 3}
+  m_PrefabInstance: {fileID: 3204007230648023487}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2f8f1037f1cd24b9e6e4f5ae6babb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &3218253805419370137
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25323,7 +25365,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 3204007230648023488}
           m_MethodName: OnClick
           m_Mode: 1
           m_Arguments:
@@ -27203,7 +27245,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3204007230648023490}
         m_MethodName: BtnLoadScene
         m_Mode: 3
         m_Arguments:
@@ -29341,7 +29383,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3204007230648023490}
         m_MethodName: BtnLoadScene
         m_Mode: 3
         m_Arguments:
