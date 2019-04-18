@@ -594,9 +594,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ea02cad44c82a4a863eabc2e23d149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartSpeed: 10
+  StartSpeed: 5
   speed: 0
-  MaxHealth: 600
+  MaxHealth: 1600
   Currenthealth: 0
   EnemyHpBar: {fileID: 1563064914260331321}
   money: {fileID: 744932690698049080, guid: 488e47dadc5dfec4dbcd3631a5714565, type: 3}
@@ -2029,11 +2029,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 741195817}
     m_Modifications:
-    - target: {fileID: 5021568622052284705, guid: 8aa8a5dc89c5aa6428df12927b236dfd,
-        type: 3}
-      propertyPath: m_Name
-      value: MoneyPosition
-      objectReference: {fileID: 0}
     - target: {fileID: 5323873594443414007, guid: 8aa8a5dc89c5aa6428df12927b236dfd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2089,6 +2084,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5021568622052284705, guid: 8aa8a5dc89c5aa6428df12927b236dfd,
+        type: 3}
+      propertyPath: m_Name
+      value: MoneyPosition
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8aa8a5dc89c5aa6428df12927b236dfd, type: 3}
 --- !u!1 &975577945678622120 stripped
@@ -2110,11 +2110,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 741195817}
     m_Modifications:
-    - target: {fileID: 2507446900661904178, guid: aeb57f31f07c7ad45be37800d532e9d0,
-        type: 3}
-      propertyPath: m_Name
-      value: enemyHp
-      objectReference: {fileID: 0}
     - target: {fileID: 3213074548257175538, guid: aeb57f31f07c7ad45be37800d532e9d0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2249,6 +2244,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0.728
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507446900661904178, guid: aeb57f31f07c7ad45be37800d532e9d0,
+        type: 3}
+      propertyPath: m_Name
+      value: enemyHp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeb57f31f07c7ad45be37800d532e9d0, type: 3}

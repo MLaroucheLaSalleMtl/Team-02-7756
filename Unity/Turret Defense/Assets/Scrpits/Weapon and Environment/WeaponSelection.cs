@@ -11,7 +11,7 @@ public class WeaponSelection : MonoBehaviour
     
 
     public int turretPrice_1 = 100;
-    public int turretPrice_2 = 200;
+    public int turretPrice_2 = 150;
     public int turretPrice_3 = 100;
     public int turretPrice_4 = 100;
     void Start()

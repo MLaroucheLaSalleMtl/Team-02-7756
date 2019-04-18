@@ -13,8 +13,8 @@ public class EnemyStats : MonoBehaviour
     [SerializeField] public float Currenthealth;
     public Image EnemyHpBar;
     private PlayerAssets code;
-    private int Reward_Normal_Fast = 80;
-    private int Reward_Boss = 200;
+    private int Reward_Normal_Fast = 25;
+    private int Reward_Boss = 60;
     private EnemySpawn EnSp;
     public ParticleSystem money;
     public Transform moneyPosition;
