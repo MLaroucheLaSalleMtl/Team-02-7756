@@ -1103,7 +1103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartSpeed: 7
   speed: 0
-  MaxHealth: 800
+  MaxHealth: 2000
   Currenthealth: 0
   EnemyHpBar: {fileID: 4832655494434417829}
   money: {fileID: 744932690698049080, guid: 488e47dadc5dfec4dbcd3631a5714565, type: 3}

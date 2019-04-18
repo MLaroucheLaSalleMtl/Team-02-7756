@@ -2333,16 +2333,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 2484282861270769503, guid: 59cb8c45605dbf144a99de6b177c20b0,
+    - target: {fileID: 9122205611531697761, guid: 59cb8c45605dbf144a99de6b177c20b0,
         type: 3}
-      propertyPath: TimeButton
+      propertyPath: WinPanel
       value: 
-      objectReference: {fileID: 32900718689464714}
-    - target: {fileID: 2484282861270769503, guid: 59cb8c45605dbf144a99de6b177c20b0,
+      objectReference: {fileID: 1176345914}
+    - target: {fileID: 9122205611531697761, guid: 59cb8c45605dbf144a99de6b177c20b0,
         type: 3}
-      propertyPath: RewindButton
+      propertyPath: GameOverMenu
       value: 
-      objectReference: {fileID: 8075104214020584413}
+      objectReference: {fileID: 548115565}
     - target: {fileID: 9122205611531697760, guid: 59cb8c45605dbf144a99de6b177c20b0,
         type: 3}
       propertyPath: PowerPosition
@@ -2368,16 +2368,6 @@ PrefabInstance:
       propertyPath: CountDown
       value: 
       objectReference: {fileID: 570257297}
-    - target: {fileID: 9122205611531697761, guid: 59cb8c45605dbf144a99de6b177c20b0,
-        type: 3}
-      propertyPath: WinPanel
-      value: 
-      objectReference: {fileID: 1176345914}
-    - target: {fileID: 9122205611531697761, guid: 59cb8c45605dbf144a99de6b177c20b0,
-        type: 3}
-      propertyPath: GameOverMenu
-      value: 
-      objectReference: {fileID: 548115565}
     - target: {fileID: 9122205611531697766, guid: 59cb8c45605dbf144a99de6b177c20b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2435,6 +2425,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9122205611531697767, guid: 59cb8c45605dbf144a99de6b177c20b0,
         type: 3}
+      propertyPath: Waves.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122205611531697767, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
       propertyPath: NextWave
       value: 
       objectReference: {fileID: 6084694283829647240}
@@ -2448,6 +2443,75 @@ PrefabInstance:
       propertyPath: UIenemyLeft
       value: 
       objectReference: {fileID: 1698509284}
+    - target: {fileID: 9122205611531697767, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: Waves.Array.data[6].EnemiesPerWave
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122205611531697767, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: Waves.Array.data[6].Enemy
+      value: 
+      objectReference: {fileID: 1506467177, guid: 3bb962c5a6199e845a1a924373bdf089,
+        type: 3}
+    - target: {fileID: 9122205611531697767, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: Waves.Array.data[7].EnemiesPerWave
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122205611531697767, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: Waves.Array.data[7].Enemy
+      value: 
+      objectReference: {fileID: 741195814, guid: b1456b43dbe6b78469ac884392524463,
+        type: 3}
+    - target: {fileID: 9122205611531697767, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: Waves.Array.data[8].EnemiesPerWave
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122205611531697767, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: Waves.Array.data[8].Enemy
+      value: 
+      objectReference: {fileID: 924849060, guid: 57e08d9ffba01f44b816e1b8d7bf679b,
+        type: 3}
+    - target: {fileID: 9122205611531697767, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: Waves.Array.data[9].EnemiesPerWave
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122205611531697767, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: Waves.Array.data[9].Enemy
+      value: 
+      objectReference: {fileID: 741195814, guid: b1456b43dbe6b78469ac884392524463,
+        type: 3}
+    - target: {fileID: 9122205611531697767, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: Waves.Array.data[0].EnemiesPerWave
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122205611531697767, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: Waves.Array.data[1].EnemiesPerWave
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122205611531697767, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: Waves.Array.data[2].EnemiesPerWave
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122205611531697767, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: Waves.Array.data[3].EnemiesPerWave
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122205611531697767, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: Waves.Array.data[4].EnemiesPerWave
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 9122205612838275297, guid: 59cb8c45605dbf144a99de6b177c20b0,
         type: 3}
       propertyPath: button1
@@ -2483,6 +2547,16 @@ PrefabInstance:
       propertyPath: moneyText
       value: 
       objectReference: {fileID: 286353126}
+    - target: {fileID: 2484282861270769503, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: TimeButton
+      value: 
+      objectReference: {fileID: 32900718689464714}
+    - target: {fileID: 2484282861270769503, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: RewindButton
+      value: 
+      objectReference: {fileID: 8075104214020584413}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59cb8c45605dbf144a99de6b177c20b0, type: 3}
 --- !u!1001 &1585131993
@@ -11563,7 +11637,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
