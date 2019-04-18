@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PowerUp_DeleteAll : MonoBehaviour
 {
 
-    public float cooldowntimer = 5f;
+    private float cooldowntimer = 60f;
     private bool PowerCool = false;
    
     public GameObject Bomb;
@@ -80,7 +80,7 @@ public class PowerUp_DeleteAll : MonoBehaviour
             {
                 PowerBUtton.SetActive(true);
                 disablePanel.SetActive(false);
-                cooldowntimer = 5f;
+                cooldowntimer = 60f;
                 PowerCool = false;
             }
         }

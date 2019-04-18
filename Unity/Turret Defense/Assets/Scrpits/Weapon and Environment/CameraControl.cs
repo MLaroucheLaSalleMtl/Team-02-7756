@@ -5,49 +5,41 @@ using UnityEngine;
 public class CameraControl : MonoBehaviour
 {
 
-    [SerializeField] float up;
-    [SerializeField] float down;
-    [SerializeField] float left;
-    [SerializeField] float right;
+    public float speed = 25f;
+    public float Thickness = 10f;
+    public Vector2 limit;
+    private float minY = 10f;
+    [SerializeField]
+    private float maxY = 25f;
+    private float scrollSpeed = 10f;
 
-    void Update()
+    private void Update()
     {
+        Vector3 pos = transform.position;
+        if (Input.GetKey("w")||Input.mousePosition.y>=Screen.height-Thickness)
+        {
+            pos.z += speed * Time.deltaTime;
+        }
+        if (Input.GetKey("s")|| Input.mousePosition.y<=Thickness)
+        {
+            pos.z -= speed * Time.deltaTime;
 
-        if (Input.mousePosition.y >= Screen.height - 20f)
-        {
-            transform.Translate(Vector3.forward * Time.deltaTime * 10f, Space.World);
         }
-    
-        if(Input.mousePosition.y <= 20f)
+        if (Input.GetKey("d")|| Input.mousePosition.x>=Screen.width-Thickness )
         {
-            transform.Translate(Vector3.back * Time.deltaTime * 10f,Space.World);
+            pos.x += speed * Time.deltaTime;
         }
-        if(Input.mousePosition.x >= Screen.width - 20f)
+        if (Input.GetKey("a")|| Input.mousePosition.x<=Thickness)
         {
-            transform.Translate(Vector3.right * Time.deltaTime * 10f);
-        }
-        if (Input.mousePosition.x <= 20f)
-        {
-            transform.Translate(Vector3.left * Time.deltaTime * 10f);
-        }
-
-        Vector3 v3 = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        v3.z = Mathf.Clamp(transform.position.z, down, up);
-        v3.x = Mathf.Clamp(transform.position.x, left,right);
-        transform.position = v3;
-
-        
-     
-        Camera.main.fieldOfView -= Input.GetAxis("Mouse ScrollWheel")* 10f;
-
-        if(Camera.main.fieldOfView < 10f)
-        {
-            Camera.main.fieldOfView = 10f;
-        }
-        else if(Camera.main.fieldOfView > 50f)
-        {
-            Camera.main.fieldOfView = 50f;
+            pos.x -= speed * Time.deltaTime;
         }
 
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        pos.y -= scroll * scrollSpeed *80* Time.deltaTime;
+        pos.x = Mathf.Clamp(pos.x, 32, limit.x);
+        pos.z = Mathf.Clamp(pos.z, -limit.y, -15);
+        pos.y = Mathf.Clamp(pos.y, minY, maxY);
+
+        transform.position = pos;
     }
 }
