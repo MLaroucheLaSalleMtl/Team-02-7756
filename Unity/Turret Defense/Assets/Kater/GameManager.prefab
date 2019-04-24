@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9122205611531697764}
-  m_LocalRotation: {x: -0.32262245, y: -0.001980446, z: 0.00067637966, w: -0.94652545}
+  m_LocalRotation: {x: 0.3226202, y: 0.0019824358, z: -0.0006757065, w: 0.94652617}
   m_LocalPosition: {x: 49.590958, y: 48.45734, z: -64.86708}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -36,7 +36,7 @@ Transform:
   - {fileID: 9122205612838275302}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 37.643, y: 0.24000001, z: 0}
 --- !u!114 &9122205611531697767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,18 +55,26 @@ MonoBehaviour:
   NextWave: {fileID: 0}
   SpawnPos: {fileID: 9122205611819263165}
   Waves:
-  - EnemiesPerWave: 10
+  - EnemiesPerWave: 20
     Enemy: {fileID: 924849060, guid: c41312e36904dea43af061cafca2e582, type: 3}
-  - EnemiesPerWave: 1
+  - EnemiesPerWave: 8
     Enemy: {fileID: 924849060, guid: 57e08d9ffba01f44b816e1b8d7bf679b, type: 3}
   - EnemiesPerWave: 15
     Enemy: {fileID: 1506467177, guid: 3bb962c5a6199e845a1a924373bdf089, type: 3}
-  - EnemiesPerWave: 3
+  - EnemiesPerWave: 10
     Enemy: {fileID: 1506467177, guid: 2ef8252bb32ef294abea8e8a7cf2504e, type: 3}
-  - EnemiesPerWave: 5
+  - EnemiesPerWave: 8
     Enemy: {fileID: 741195814, guid: b1456b43dbe6b78469ac884392524463, type: 3}
   - EnemiesPerWave: 10
     Enemy: {fileID: 924849060, guid: 57e08d9ffba01f44b816e1b8d7bf679b, type: 3}
+  - EnemiesPerWave: 15
+    Enemy: {fileID: 1506467177, guid: 3bb962c5a6199e845a1a924373bdf089, type: 3}
+  - EnemiesPerWave: 10
+    Enemy: {fileID: 741195814, guid: b1456b43dbe6b78469ac884392524463, type: 3}
+  - EnemiesPerWave: 10
+    Enemy: {fileID: 924849060, guid: 57e08d9ffba01f44b816e1b8d7bf679b, type: 3}
+  - EnemiesPerWave: 10
+    Enemy: {fileID: 741195814, guid: b1456b43dbe6b78469ac884392524463, type: 3}
   TimeBetweenEnemies: 2
   _totalEnemiesInCurrentWave: 0
   _enemiesInWaveLeft: 0
@@ -115,7 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbff1deba30082f47b581ece932729b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldowntimer: 10
   Bomb: {fileID: 560653949, guid: 95c89efd3c65843429d1748f536d1e60, type: 3}
   PowerPosition: {fileID: 0}
   BombDamage: 300
@@ -147,7 +154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9122205611819263154}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.76, y: 9.26, z: 94.68}
+  m_LocalPosition: {x: 12.54, y: -8.71, z: 71.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9122205611531697766}

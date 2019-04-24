@@ -20,6 +20,8 @@ public class Wave
 
 public class EnemySpawn : MonoBehaviour
 {
+    secondWave numberOfenemies;
+
     private bool countdownNextWave = false;
     PowerUp_DeleteAll NewCode;
     GameManager code; 
@@ -30,7 +32,8 @@ public class EnemySpawn : MonoBehaviour
 
     public GameObject NextWave;
     public Transform SpawnPos;
-   
+
+    public bool IsAnewWave = false;
      
    // public ParticleSystem money;
     
@@ -70,6 +73,7 @@ public class EnemySpawn : MonoBehaviour
     void Start()
 
     {
+        numberOfenemies = FindObjectOfType<secondWave>();
         countdownNextWave = false;
         code = GameObject.Find("GameManager").GetComponent<GameManager>();
         NewCode = FindObjectOfType<PowerUp_DeleteAll>();
@@ -88,7 +92,7 @@ public class EnemySpawn : MonoBehaviour
     void StartNextWave()
 
     {
-
+        IsAnewWave = true;
         _currentWave++;
 
 
@@ -100,9 +104,9 @@ public class EnemySpawn : MonoBehaviour
 
         }
 
-
+        
         _totalEnemiesInCurrentWave = Waves[_currentWave].EnemiesPerWave;
-        _enemiesInWaveLeft = Waves[_currentWave].EnemiesPerWave;
+        _enemiesInWaveLeft = Waves[_currentWave].EnemiesPerWave + numberOfenemies.MaxEnemies;
 
         //_enemiesInWaveLeft = 0;
 

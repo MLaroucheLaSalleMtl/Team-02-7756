@@ -12,6 +12,7 @@ TagManager:
   - EnemyMAMA
   - Turret
   - Cube
+  - Point
   layers:
   - Default
   - TransparentFX
