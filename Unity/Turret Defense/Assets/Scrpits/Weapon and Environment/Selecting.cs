@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class Selecting : MonoBehaviour
 {
+    public AudioClip upgradeClip;
+    public AudioSource upgradeSource;
       public ParticleSystem particle;
       public Transform particleplace;
     //public GameObject parti;

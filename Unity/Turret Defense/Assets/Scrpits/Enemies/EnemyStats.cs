@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class EnemyStats : MonoBehaviour
@@ -18,6 +19,9 @@ public class EnemyStats : MonoBehaviour
     private EnemySpawn EnSp;
     public ParticleSystem money;
     public Transform moneyPosition;
+
+    public AudioClip deathClip;
+    public AudioSource deathSource;
 
     //public float OldSpeed;
     //private float NewStartSpeed;
@@ -43,6 +47,7 @@ public class EnemyStats : MonoBehaviour
         EnemyHpBar.fillAmount = Currenthealth / MaxHealth;
         if (Currenthealth <= 0)
         {
+            deathSource.PlayOneShot(deathClip, 1f);
             ParticleSystem MyMoney=(ParticleSystem)
                 Instantiate(money, moneyPosition.position, moneyPosition.rotation);
 

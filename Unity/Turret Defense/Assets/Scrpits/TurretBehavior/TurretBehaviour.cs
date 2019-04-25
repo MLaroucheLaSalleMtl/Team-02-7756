@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class TurretBehaviour : MonoBehaviour
 {
@@ -43,6 +44,8 @@ public class TurretBehaviour : MonoBehaviour
     [SerializeField]
     private float PowerFireRate = 10f;
     private float NewPowerRate;
+    public AudioClip cannonClip;
+    public AudioSource cannonSource;
   
 
     void SearchTarget()
@@ -78,6 +81,7 @@ public class TurretBehaviour : MonoBehaviour
     void Shoot()
     {
         //Debug.Log("Shoot!");
+        cannonSource.PlayOneShot(cannonClip, 1f);
         GameObject cloneMuzz = (GameObject)Instantiate(Muzz_MachineGun,firePoint.position,firePoint.rotation);
         Destroy(cloneMuzz,0.3f);
         
