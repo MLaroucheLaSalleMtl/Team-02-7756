@@ -7,7 +7,7 @@ public class TurretBehaviour : MonoBehaviour
 {
     [SerializeField] public GameObject UIUpgrade;
     //  private bool currentObject = false;
-  
+   // public bool isUpgraded = false;
 
     private EnemyStats targetEnemy;
     public Transform target;

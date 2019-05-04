@@ -129,6 +129,8 @@ MonoBehaviour:
   particleplace: {fileID: 236273102981817114}
   SellbUTTON: {fileID: 8798462309578489405}
   UpgradeButton: {fileID: 8798462310615257951}
+  ButtonGameupgrade: {fileID: 8798462310615257945}
+  isUpgraded: 0
   price: 3
 --- !u!120 &2558679463143361783
 LineRenderer:
@@ -797,13 +799,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 275314561315178500}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8798462310615257945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8775395782935026525, guid: adfc97211fed5d04bbf52204ae4d631f,
+    type: 3}
+  m_PrefabInstance: {fileID: 275314561315178500}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8798462310615257951 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8775395782935026523, guid: adfc97211fed5d04bbf52204ae4d631f,
     type: 3}
   m_PrefabInstance: {fileID: 275314561315178500}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 8798462310615257945}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}

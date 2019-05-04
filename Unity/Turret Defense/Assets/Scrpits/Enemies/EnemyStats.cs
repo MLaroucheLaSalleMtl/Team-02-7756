@@ -21,7 +21,7 @@ public class EnemyStats : MonoBehaviour
     public Transform moneyPosition;
 
     public AudioClip deathClip;
-    public AudioSource deathSource;
+    //public AudioSource deathSource;
 
     //public float OldSpeed;
     //private float NewStartSpeed;
@@ -47,7 +47,7 @@ public class EnemyStats : MonoBehaviour
         EnemyHpBar.fillAmount = Currenthealth / MaxHealth;
         if (Currenthealth <= 0)
         {
-            deathSource.PlayOneShot(deathClip, 1f);
+           // deathSource.PlayOneShot(deathClip, 1f);
             ParticleSystem MyMoney=(ParticleSystem)
                 Instantiate(money, moneyPosition.position, moneyPosition.rotation);
 

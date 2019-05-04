@@ -5923,32 +5923,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 677056730}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &987547009 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9122205611531697764, guid: 59cb8c45605dbf144a99de6b177c20b0,
-    type: 3}
-  m_PrefabInstance: {fileID: 1869878145}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &987547013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 987547009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eec67a8056179ed45a7d3c40469ed6ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SecSwaner: {fileID: 718456404}
-  StartToSpawn: 0
-  enemies:
-  - {fileID: 741195814, guid: 6fd39443ffabbc942baf5109d562cc74, type: 3}
-  - {fileID: 1506467177, guid: 62ba2b28cd322e244b5ac6b5dadf9456, type: 3}
-  - {fileID: 924849060, guid: d6f1a4a97a79c2b4eab0276667d21d47, type: 3}
-  spawnTime: 2
-  MaxEnemies: 5
 --- !u!1 &999787477
 GameObject:
   m_ObjectHideFlags: 0
@@ -9612,7 +9586,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1869878145}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 987547009}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2489ef85fce5679479928c681c9cbbaa, type: 3}
@@ -10868,7 +10842,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1869878145}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 987547009}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbff1deba30082f47b581ece932729b1, type: 3}
@@ -11518,16 +11492,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 9122205611531697761, guid: 59cb8c45605dbf144a99de6b177c20b0,
+    - target: {fileID: 2484282861270769503, guid: 59cb8c45605dbf144a99de6b177c20b0,
         type: 3}
-      propertyPath: WinPanel
+      propertyPath: TimeButton
       value: 
-      objectReference: {fileID: 177074349}
-    - target: {fileID: 9122205611531697761, guid: 59cb8c45605dbf144a99de6b177c20b0,
+      objectReference: {fileID: 32900719971884061}
+    - target: {fileID: 2484282861270769503, guid: 59cb8c45605dbf144a99de6b177c20b0,
         type: 3}
-      propertyPath: GameOverMenu
+      propertyPath: RewindButton
       value: 
-      objectReference: {fileID: 1815869946}
+      objectReference: {fileID: 8075104215017758282}
     - target: {fileID: 9122205611531697760, guid: 59cb8c45605dbf144a99de6b177c20b0,
         type: 3}
       propertyPath: PowerPosition
@@ -11553,6 +11527,16 @@ PrefabInstance:
       propertyPath: CountDown
       value: 
       objectReference: {fileID: 1835860486}
+    - target: {fileID: 9122205611531697761, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: WinPanel
+      value: 
+      objectReference: {fileID: 177074349}
+    - target: {fileID: 9122205611531697761, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: GameOverMenu
+      value: 
+      objectReference: {fileID: 1815869946}
     - target: {fileID: 9122205611531697766, guid: 59cb8c45605dbf144a99de6b177c20b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11678,16 +11662,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 14.99
       objectReference: {fileID: 0}
-    - target: {fileID: 2484282861270769503, guid: 59cb8c45605dbf144a99de6b177c20b0,
-        type: 3}
-      propertyPath: TimeButton
-      value: 
-      objectReference: {fileID: 32900719971884061}
-    - target: {fileID: 2484282861270769503, guid: 59cb8c45605dbf144a99de6b177c20b0,
-        type: 3}
-      propertyPath: RewindButton
-      value: 
-      objectReference: {fileID: 8075104215017758282}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59cb8c45605dbf144a99de6b177c20b0, type: 3}
 --- !u!1001 &1870786749

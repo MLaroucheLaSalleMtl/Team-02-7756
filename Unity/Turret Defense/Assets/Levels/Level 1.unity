@@ -10884,16 +10884,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 9122205611531697761, guid: 59cb8c45605dbf144a99de6b177c20b0,
-        type: 3}
-      propertyPath: GameOverMenu
-      value: 
-      objectReference: {fileID: 69398758540217424}
-    - target: {fileID: 9122205611531697761, guid: 59cb8c45605dbf144a99de6b177c20b0,
-        type: 3}
-      propertyPath: WinPanel
-      value: 
-      objectReference: {fileID: 69398760040596743}
     - target: {fileID: 9122205611531697760, guid: 59cb8c45605dbf144a99de6b177c20b0,
         type: 3}
       propertyPath: PowerPosition
@@ -10919,6 +10909,16 @@ PrefabInstance:
       propertyPath: CountDown
       value: 
       objectReference: {fileID: 69398758562101164}
+    - target: {fileID: 9122205611531697761, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: GameOverMenu
+      value: 
+      objectReference: {fileID: 69398758540217424}
+    - target: {fileID: 9122205611531697761, guid: 59cb8c45605dbf144a99de6b177c20b0,
+        type: 3}
+      propertyPath: WinPanel
+      value: 
+      objectReference: {fileID: 69398760040596743}
     - target: {fileID: 9122205611531697766, guid: 59cb8c45605dbf144a99de6b177c20b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11223,7 +11223,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 95.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2484282861270769503, guid: 59cb8c45605dbf144a99de6b177c20b0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 59cb8c45605dbf144a99de6b177c20b0, type: 3}
 --- !u!1 &9174837541639453152
 GameObject:

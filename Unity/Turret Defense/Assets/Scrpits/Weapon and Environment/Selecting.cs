@@ -19,6 +19,8 @@ public class Selecting : MonoBehaviour
     private int GlaceSell = 50;
     [SerializeField] private Button SellbUTTON;
     [SerializeField] private Button UpgradeButton;
+    [SerializeField] private GameObject ButtonGameupgrade;
+    public bool isUpgraded = false;
 
     public enum PriceForSell
     {
@@ -32,6 +34,7 @@ public class Selecting : MonoBehaviour
 
     public void Upgradde()
     {
+        isUpgraded = true;
         Instantiate(particle, particleplace.transform.position, particleplace.transform.rotation);
 
         if (price == PriceForSell.MachineGun)
@@ -40,6 +43,7 @@ public class Selecting : MonoBehaviour
           
             gameObject.GetComponent<TurretBehaviour>().fireRate += 2f;
             money.moneyLeft -= 200;
+            
             //particle.Stop();
         }
         if (price == PriceForSell.Cannon)
@@ -101,6 +105,10 @@ public class Selecting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isUpgraded == true)
+        {
+            ButtonGameupgrade.SetActive(false);
+        }
         if (price == PriceForSell.MachineGun)
         {
             UpgradeButton.interactable = (money.moneyLeft < 200) ? false : true;
