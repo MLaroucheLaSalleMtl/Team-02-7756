@@ -168,8 +168,8 @@ public class EnemySpawn : MonoBehaviour
             if (_enemiesInWaveLeft == 0 && _spawnedEnemies == _totalEnemiesInCurrentWave)
             {
                 code.winGame();
-                int index = SceneManager.GetActiveScene().buildIndex;
-                PlayerPrefs.GetInt("levelPassed", index);
+                //int index = SceneManager.GetActiveScene().buildIndex;
+                //PlayerPrefs.GetInt("levelPassed", index);
 
             }
         }

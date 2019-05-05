@@ -16,18 +16,18 @@ public class ButtonBlocker : MonoBehaviour
     void Start()
     {
 
-        int levelReached = PlayerPrefs.GetInt("levelPassed", 1);
-        Debug.Log("LevelPassed" + levelReached);
+        //int levelReached = PlayerPrefs.GetInt("levelPassed", 1);
+        //Debug.Log("LevelPassed" + levelReached);
 
-        for (int i = 0; i < levelButtons.Length; i++)
-        {
-            levelButtons[i].interactable = (i + 1 > levelReached) ? false : true;
-            //levelToUnlock++;
-            //if (i+1 > levelReached)
-            //{
-            //    levelButtons[i].interactable = false;
-            //}
-        }
+        //for (int i = 0; i < levelButtons.Length; i++)
+        //{
+        //    levelButtons[i].interactable = (i + 1 > levelReached) ? false : true;
+        //    //levelToUnlock++;
+        //    //if (i+1 > levelReached)
+        //    //{
+        //    //    levelButtons[i].interactable = false;
+        //    //}
+        //}
        
 
     }
